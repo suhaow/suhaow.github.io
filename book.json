@@ -1,0 +1,39 @@
+{
+    "title": "suhw gitbook",
+    "description": "suhw 学习笔记",
+    "author": "suhaowei",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "chapter-fold",
+        "expandable-chapters",
+        "lightbox",
+        "-lunr",
+        "-search",
+        "search-pro",
+        "splitter",
+        "code",
+        "anchor-navigation-ex",
+        "github",
+        "-highlight",
+        "prism"
+    ],
+    "pluginsConfig": {
+        "anchor-navigation-ex": {
+            "showLevel": false,
+            "showGoTop": true
+        },
+        "github": {
+            "url": "https://github.com/suhaow"
+        },
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-okaidia.css"
+            ]
+        },
+        "insert-logo": {
+            "url": "images/golang.png",
+            "style": "background: none; max-height: 120px; min-height: 120px"
+        }
+    }
+}
