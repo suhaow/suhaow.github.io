@@ -1,0 +1,813 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Playbook · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="roles角色.html" />
+    
+    
+    <link rel="prev" href="常用模块.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/supervisor.html">
+            
+                <a href="../linux/supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/vsftpd.html">
+            
+                <a href="../linux/vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="安装介绍.html">
+            
+                <a href="安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="常用模块.html">
+            
+                <a href="常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="Playbook.html">
+            
+                <a href="Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="roles角色.html">
+            
+                <a href="roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Playbook</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li><li><span class="title-icon "></span><a href="#&#x4ECB;&#x7ECD;"><b></b>&#x4ECB;&#x7ECD;</a></li><li><span class="title-icon "></span><a href="#yaml&#x8BED;&#x8A00;"><b></b>YAML&#x8BED;&#x8A00;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6559;&#x7A0B;"><b></b>&#x6559;&#x7A0B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6838;&#x5FC3;&#x5143;&#x7D20;"><b></b>&#x6838;&#x5FC3;&#x5143;&#x7D20;</a></li><li><span class="title-icon "></span><a href="#playbook&#x547D;&#x4EE4;"><b></b>playbook&#x547D;&#x4EE4;</a></li><ul><li><span class="title-icon "></span><a href="#&#x683C;&#x5F0F;"><b></b>&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x89C1;&#x9009;&#x9879;"><b></b>&#x5E38;&#x89C1;&#x9009;&#x9879;</a></li></ul><li><span class="title-icon "></span><a href="#playbook&#x521D;&#x6B65;"><b></b>playbook&#x521D;&#x6B65;</a></li><li><span class="title-icon "></span><a href="#handlers&#x548C;notify"><b></b>handlers&#x548C;notify</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#tags&#x7EC4;&#x4EF6;"><b></b>tags&#x7EC4;&#x4EF6;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_1"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_1"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;"><b></b>ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B9A;&#x4E49;"><b></b>&#x5B9A;&#x4E49;</a></li><li><span class="title-icon "></span><a href="#&#x8C03;&#x7528;"><b></b>&#x8C03;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;setup&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;"><b></b>&#x4F7F;&#x7528;setup&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><b></b>&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><b></b>&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</a></li><li><span class="title-icon "></span><a href="#&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;"><b></b>&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><b></b>&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</a></li></ul><li><span class="title-icon "></span><a href="#template&#x6A21;&#x677F;"><b></b>template&#x6A21;&#x677F;</a></li><ul><li><span class="title-icon "></span><a href="#jinja2&#x8BED;&#x8A00;"><b></b>jinja2&#x8BED;&#x8A00;</a></li><li><span class="title-icon "></span><a href="#template"><b></b>template</a></li><ul><li><span class="title-icon "></span><a href="#&#x529F;&#x80FD;"><b></b>&#x529F;&#x80FD;</a></li><li><span class="title-icon "></span><a href="#&#x8981;&#x6C42;"><b></b>&#x8981;&#x6C42;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_2"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><b></b>&#x6D41;&#x7A0B;&#x63A7;&#x5236;</a></li><ul><li><span class="title-icon "></span><a href="#for&#x5FAA;&#x73AF;"><b></b>for&#x5FAA;&#x73AF;</a></li><li><span class="title-icon "></span><a href="#if-&#x5224;&#x65AD;"><b></b>if &#x5224;&#x65AD;</a></li></ul></ul><li><span class="title-icon "></span><a href="#playbook&#x4F7F;&#x7528;when"><b></b>playbook&#x4F7F;&#x7528;when</a></li><ul><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_3"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#&#x8FED;&#x4EE3;withitems"><b></b>&#x8FED;&#x4EE3;with_items</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_2"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;"><b></b>&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;</a></li></ul></ul></div><a href="#&#x53C2;&#x8003;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<ol>
+<li><a href="https://www.bilibili.com/video/BV1HZ4y1p7Bf?from=search&amp;seid=3229559529999977012" target="_blank">bilibili&#x9A6C;&#x54E5;&#x89C6;&#x9891;</a></li>
+<li><a href="http://www.yunweipai.com/ansible%e6%95%99%e7%a8%8b" target="_blank">&#x8FD0;&#x7EF4;&#x6D3E;&#x6559;&#x7A0B;</a></li>
+</ol>
+<hr>
+<h1 id="&#x4ECB;&#x7ECD;"><a name="&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4ECB;&#x7ECD;</h1>
+<p>&#x5728;<code>Playbook</code>&#x4E2D;&#xFF0C;&#x4F7F;&#x7528;<code>task</code>&#x6765;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x5B50;&#x4EFB;&#x52A1;&#xFF0C;&#x5E76;&#x5728;&#x4EFB;&#x52A1;&#x4E2D;&#x6307;&#x5B9A;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x4EE5;&#x53CA;&#x89E6;&#x53D1;&#x6761;&#x4EF6;&#x7B49;&#x4FE1;&#x606F;&#x3002;&#x6700;&#x7EC8;&#x4E00;&#x4E2A;<code>Playbook</code>&#x7684;<code>Yml</code>&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x7531;&#x591A;&#x4E2A;<code>task</code>&#x7EC4;&#x6210;&#xFF0C;&#x6309;&#x7167;&#x4EFB;&#x52A1;&#x987A;&#x5E8F;&#x5BF9;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x8FDB;&#x884C;&#x81EA;&#x52A8;&#x5316;&#x8FD0;&#x7EF4;</p>
+<hr>
+<h1 id="yaml&#x8BED;&#x8A00;"><a name="yaml&#x8BED;&#x8A00;" class="anchor-navigation-ex-anchor" href="#yaml&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>YAML&#x8BED;&#x8A00;</h1>
+<h2 id="&#x6559;&#x7A0B;"><a name="&#x6559;&#x7A0B;" class="anchor-navigation-ex-anchor" href="#&#x6559;&#x7A0B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6559;&#x7A0B;</h2>
+<p><a href="https://www.runoob.com/w3cnote/yaml-intro.html" target="_blank">https://www.runoob.com/w3cnote/yaml-intro.html</a></p>
+<hr>
+<h1 id="&#x6838;&#x5FC3;&#x5143;&#x7D20;"><a name="&#x6838;&#x5FC3;&#x5143;&#x7D20;" class="anchor-navigation-ex-anchor" href="#&#x6838;&#x5FC3;&#x5143;&#x7D20;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6838;&#x5FC3;&#x5143;&#x7D20;</h1>
+<ul>
+<li>Hosts   &#x6267;&#x884C;&#x7684;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x5217;&#x8868;</li>
+<li>remote_user&#xFF1A;&#x6307;&#x5B9A;&#x6267;&#x884C;&#x4EFB;&#x52A1;&#x65F6;&#x5728;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x4E0A;&#x6240;&#x7528;&#x7684;&#x7528;&#x6237;</li>
+<li>Tasks   &#x4EFB;&#x52A1;&#x96C6;</li>
+<li>Variables &#x5185;&#x7F6E;&#x53D8;&#x91CF;&#x6216;&#x81EA;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x5728;playbook&#x4E2D;&#x8C03;&#x7528;</li>
+<li>Templates  &#x6A21;&#x677F;&#xFF0C;&#x53EF;&#x66FF;&#x6362;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#x5E76;&#x5B9E;&#x73B0;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x903B;&#x8F91;&#x7684;&#x6587;&#x4EF6;</li>
+<li>Handlers  &#x548C; notify &#x7ED3;&#x5408;&#x4F7F;&#x7528;&#xFF0C;&#x7531;&#x7279;&#x5B9A;&#x6761;&#x4EF6;&#x89E6;&#x53D1;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6EE1;&#x8DB3;&#x6761;&#x4EF6;&#x65B9;&#x624D;&#x6267;&#x884C;&#xFF0C;&#x5426;&#x5219;&#x4E0D;&#x6267;&#x884C;</li>
+<li>tags &#x6807;&#x7B7E;   &#x6307;&#x5B9A;&#x67D0;&#x6761;&#x4EFB;&#x52A1;&#x6267;&#x884C;&#xFF0C;&#x7528;&#x4E8E;&#x9009;&#x62E9;&#x8FD0;&#x884C;playbook&#x4E2D;&#x7684;&#x90E8;&#x5206;&#x4EE3;&#x7801;&#x3002;ansible&#x5177;&#x6709;&#x5E42;&#x7B49;&#x6027;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x81EA;&#x52A8;&#x8DF3;&#x8FC7;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5373;&#x4FBF;&#x5982;&#x6B64;&#xFF0C;&#x6709;&#x4E9B;&#x4EE3;&#x7801;&#x4E3A;&#x6D4B;&#x8BD5;&#x5176;&#x786E;&#x5B9E;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x7684;&#x65F6;&#x95F4;&#x4F9D;&#x7136;&#x4F1A;&#x975E;&#x5E38;&#x5730;&#x957F;&#x3002;&#x6B64;&#x65F6;&#xFF0C;&#x5982;&#x679C;&#x786E;&#x4FE1;&#x5176;&#x6CA1;&#x6709;&#x53D8;&#x5316;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;tags&#x8DF3;&#x8FC7;&#x6B64;&#x4E9B;&#x4EE3;&#x7801;&#x7247;&#x65AD;</li>
+</ul>
+<p><strong>&#x6CE8;&#xFF1A;hosts&#x7528;&#x4E8E;&#x6307;&#x5B9A;&#x8981;&#x6267;&#x884C;&#x6307;&#x5B9A;&#x4EFB;&#x52A1;&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x987B;&#x4E8B;&#x5148;&#x5B9A;&#x4E49;&#x5728;&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x4E2D;</strong></p>
+<hr>
+<h1 id="playbook&#x547D;&#x4EE4;"><a name="playbook&#x547D;&#x4EE4;" class="anchor-navigation-ex-anchor" href="#playbook&#x547D;&#x4EE4;"><i class="fa fa-link" aria-hidden="true"></i></a>playbook&#x547D;&#x4EE4;</h1>
+<h2 id="&#x683C;&#x5F0F;"><a name="&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x683C;&#x5F0F;</h2>
+<pre class="language-"><code class="lang-bash">ansible-playbook <span class="token operator">&lt;</span>filename.yml<span class="token operator">&gt;</span> <span class="token punctuation">..</span>. <span class="token punctuation">[</span>options<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="&#x5E38;&#x89C1;&#x9009;&#x9879;"><a name="&#x5E38;&#x89C1;&#x9009;&#x9879;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x89C1;&#x9009;&#x9879;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x89C1;&#x9009;&#x9879;</h2>
+<pre class="language-"><code class="lang-bash">-C --check          <span class="token comment">#&#x53EA;&#x68C0;&#x6D4B;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x751F;&#x7684;&#x6539;&#x53D8;&#xFF0C;&#x4F46;&#x4E0D;&#x771F;&#x6B63;&#x6267;&#x884C;&#x64CD;&#x4F5C;</span>
+--list-hosts        <span class="token comment">#&#x5217;&#x51FA;&#x8FD0;&#x884C;&#x4EFB;&#x52A1;&#x7684;&#x4E3B;&#x673A;</span>
+--list-tags         <span class="token comment">#&#x5217;&#x51FA;tag</span>
+--list-tasks        <span class="token comment">#&#x5217;&#x51FA;task</span>
+--limit &#x4E3B;&#x673A;&#x5217;&#x8868;      <span class="token comment">#&#x53EA;&#x9488;&#x5BF9;&#x4E3B;&#x673A;&#x5217;&#x8868;&#x4E2D;&#x7684;&#x4E3B;&#x673A;&#x6267;&#x884C;</span>
+-v -vv  -vvv        <span class="token comment">#&#x663E;&#x793A;&#x8FC7;&#x7A0B;</span>
+</code></pre>
+<hr>
+<h1 id="playbook&#x521D;&#x6B65;"><a name="playbook&#x521D;&#x6B65;" class="anchor-navigation-ex-anchor" href="#playbook&#x521D;&#x6B65;"><i class="fa fa-link" aria-hidden="true"></i></a>playbook&#x521D;&#x6B65;</h1>
+<p>&#x5F00;&#x542F;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;<code>mysql</code>&#x7684;&#x8FDC;&#x7A0B;&#x8BBF;&#x95EE;&#x6743;&#x9650;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># cat config-mysql.yml </span>
+<span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> csmp
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+      <span class="token key atrule">replace</span><span class="token punctuation">:</span> path=/etc/my.cnf.d/server.cnf regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<p>&#x6267;&#x884C;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># ansible-playbook config-mysql.yml -vv</span>
+</code></pre>
+<hr>
+<h1 id="handlers&#x548C;notify"><a name="handlers&#x548C;notify" class="anchor-navigation-ex-anchor" href="#handlers&#x548C;notify"><i class="fa fa-link" aria-hidden="true"></i></a>handlers&#x548C;notify</h1>
+<h2 id="&#x4F5C;&#x7528;"><a name="&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<p>&#x53EA;&#x6709;&#x5F53;&#x5173;&#x6CE8;&#x7684;&#x8D44;&#x6E90;&#x53D1;&#x751F;&#x53D8;&#x5316;&#x65F6;&#xFF0C;&#x624D;&#x4F1A;&#x91C7;&#x53D6;&#x4E00;&#x5B9A;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x5728;<code>notify</code>&#x4E2D;&#x5217;&#x51FA;&#x7684;&#x64CD;&#x4F5C;&#x6210;&#x4E3A;<code>handler</code></p>
+<h2 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<p>&#x6539;&#x5199;&#x4E0A;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x4FEE;&#x6539;&#x7684;&#x65F6;&#x5019;&#x624D;&#x91CD;&#x542F;<code>mysql</code>&#x670D;&#x52A1;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> csmp
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+      <span class="token key atrule">replace</span><span class="token punctuation">:</span> path=/etc/my.cnf.d/server.cnf regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+      <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart mysql
+
+    <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<hr>
+<h1 id="tags&#x7EC4;&#x4EF6;"><a name="tags&#x7EC4;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#tags&#x7EC4;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>tags&#x7EC4;&#x4EF6;</h1>
+<h2 id="&#x4F5C;&#x7528;_1"><a name="&#x4F5C;&#x7528;_1" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<p>&#x5728;<code>playbook</code>&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x5229;&#x7528;<code>tags</code>&#x7EC4;&#x4EF6;&#xFF0C;&#x4E3A;&#x7279;&#x5B9A;<code>task</code>&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#xFF0C;&#x5F53;&#x5728;&#x6267;&#x884C;<code>playbook</code>&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x53EA;&#x6267;&#x884C;&#x7279;&#x5B9A;<code>tags</code>&#x7684;<code>tasks</code>&#xFF0C;&#x800C;&#x975E;&#x6574;&#x4E2A;<code>playbook</code>&#x6587;&#x4EF6;</p>
+<h2 id="&#x793A;&#x4F8B;_1"><a name="&#x793A;&#x4F8B;_1" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> csmp
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+      <span class="token key atrule">replace</span><span class="token punctuation">:</span> path=/etc/my.cnf.d/server.cnf regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span> replace
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+      <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+      <span class="token key atrule">tags</span><span class="token punctuation">:</span> effective
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x5C31;&#x53EF;&#x53EA;&#x901A;&#x8FC7;<code>tags</code>&#x6267;&#x884C;&#x5176;&#x4E2D;&#x67D0;&#x4E00;&#x4E2A;<code>task</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># ansible-playbook config-mysql.yml --list-tags</span>
+
+playbook: config-mysql.yml
+
+  play <span class="token comment">#1 (csmp): csmp    TAGS: []</span>
+      TASK TAGS: <span class="token punctuation">[</span>effective, replace<span class="token punctuation">]</span>
+
+<span class="token comment">#  -t TAGS, --tags TAGS  only run plays and tasks tagged with these values</span>
+<span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># ansible-playbook -t effective config-mysql.yml</span>
+</code></pre>
+<hr>
+<h1 id="ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;"><a name="ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>ansible&#x4E2D;&#x4F7F;&#x7528;&#x53D8;&#x91CF;</h1>
+<h2 id="&#x5B9A;&#x4E49;"><a name="&#x5B9A;&#x4E49;" class="anchor-navigation-ex-anchor" href="#&#x5B9A;&#x4E49;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B9A;&#x4E49;</h2>
+<p>&#x4EC5;&#x80FD;&#x7531;&#x5B57;&#x6BCD;&#x3001;&#x6570;&#x5B57;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x7EC4;&#x6210;&#xFF0C;&#x4E14;&#x53EA;&#x80FD;&#x4EE5;&#x5B57;&#x6BCD;&#x5F00;&#x5934;</p>
+<pre class="language-"><code>variable=value
+</code></pre><h2 id="&#x8C03;&#x7528;"><a name="&#x8C03;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x8C03;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8C03;&#x7528;</h2>
+<p>&#x901A;&#x8FC7; &#x8C03;&#x7528;&#x53D8;&#x91CF;&#xFF0C;&#x4E14;&#x53D8;&#x91CF;&#x540D;&#x524D;&#x540E;&#x5EFA;&#x8BAE;&#x52A0;&#x7A7A;&#x683C;&#xFF0C;&#x6709;&#x65F6;&#x7528;&#x201C;&#x201D;&#x624D;&#x751F;&#x6548;</p>
+<h2 id="&#x4F7F;&#x7528;setup&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;"><a name="&#x4F7F;&#x7528;setup&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;setup&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;<code>setup</code>&#x6A21;&#x5757;&#x4E2D;&#x53D8;&#x91CF;</h2>
+<p>&#x8981;&#x6C42;&#x5728;<code>playbook</code>&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x4E0D;&#x8981;&#x7528;<code>ansible</code>&#x547D;&#x4EE4;&#x8C03;&#x7528;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+<span class="token comment">#var.yml</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> all
+  <span class="token key atrule">remote_user</span><span class="token punctuation">:</span> root
+  <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> yes
+
+  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> create log file
+      <span class="token key atrule">file</span><span class="token punctuation">:</span> name=/data/.log state=touch owner=wang mode=600
+
+ansible<span class="token punctuation">-</span>playbook  var.yml
+</code></pre>
+<h2 id="&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><a name="&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;playbook&#x547D;&#x4EE4;&#x884C;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h2>
+<p>&#x901A;&#x8FC7;<code>-e</code>&#x53C2;&#x6570;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code>  -e EXTRA_VARS, --extra-vars EXTRA_VARS
+                        set additional variables as key=value or YAML/JSON, if
+                        filename prepend with @
+</code></pre><p>&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+       <span class="token key atrule">replace</span><span class="token punctuation">:</span> path=/etc/my.cnf.d/server.cnf regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+       <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart mysql
+
+    <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+       <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<p>&#x5728;&#x6267;&#x884C;&#x65F6;&#x901A;&#x8FC7;<code>-e</code>&#x6307;&#x5B9A;<code>server</code>&#x53D8;&#x91CF;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># ansible-playbook config-mysql.yml -e server=10.47.119.156</span>
+</code></pre>
+<h2 id="&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><a name="&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5728;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h2>
+<p><code>vars</code>&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x540E;&#x7EED;&#x76F4;&#x63A5;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">path</span><span class="token punctuation">:</span> /etc/my.cnf.d/server.cnf
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+       <span class="token key atrule">replace</span><span class="token punctuation">:</span> path= regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+       <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart mysql
+
+    <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+       <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;"><a name="&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;</h2>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#xFF0C;&#x5728;&#x53E6;&#x4E00;&#x4E2A;playbook&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x6BD4;playbook&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&#x53D8;&#x91CF;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># &#x5B9A;&#x4E49;&#x53D8;&#x91CF;&#x6587;&#x4EF6;</span>
+<span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># cat config-mysql-var.yml </span>
+<span class="token punctuation">---</span>
+<span class="token key atrule">server_conf_path</span><span class="token punctuation">:</span> /etc/my.cnf.d/server.cnf
+
+<span class="token comment"># playbook&#x6587;&#x4EF6;&#x4E2D;&#x5F15;&#x5165;&#x4F7F;&#x7528;</span>
+<span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># cat config-mysql.yml </span>
+<span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">vars_files</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> config<span class="token punctuation">-</span>mysql<span class="token punctuation">-</span>var.yml
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+       <span class="token key atrule">replace</span><span class="token punctuation">:</span> path= regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+       <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart mysql
+
+    <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+       <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<h2 id="&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><a name="&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;" class="anchor-navigation-ex-anchor" href="#&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</h2>
+<ul>
+<li><strong>&#x4E3B;&#x673A;&#xFF08;&#x666E;&#x901A;&#xFF09;&#x53D8;&#x91CF;</strong></li>
+</ul>
+<p>&#x5728;<code>inventory</code>&#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x4E3A;<strong>&#x6307;&#x5B9A;&#x5F97;&#x4E3B;&#x673A;&#x5B9A;&#x4E49;&#x53D8;&#x91CF;</strong>&#xFF0C;&#x4EE5;&#x4FBF;&#x5728;<code>playbook</code>&#x4E2D;&#x4F7F;&#x7528;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># cat /etc/ansible/hosts </span>
+<span class="token punctuation">[</span>server<span class="token punctuation">]</span>
+<span class="token number">10.47</span>.119.156 <span class="token assign-left variable">server_conf_path</span><span class="token operator">=</span>/etc/my.cnf.d/server.cnf
+<span class="token number">10.47</span>.119.157 <span class="token assign-left variable">server_conf_path</span><span class="token operator">=</span>/etc/my.cnf.d/server1.cnf
+</code></pre>
+<ul>
+<li><strong>&#x7EC4;&#xFF08;&#x516C;&#x5171;&#xFF09;&#x53D8;&#x91CF;</strong></li>
+</ul>
+<p>&#x5728;inventory &#x4E3B;&#x673A;&#x6E05;&#x5355;&#x6587;&#x4EF6;&#x4E2D;&#x8D4B;&#x4E88;&#x7ED9;&#x6307;&#x5B9A;&#x7EC4;&#x5185;&#x6240;&#x6709;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5728;playbook&#x4E2D;&#x53EF;&#x7528;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x5982;&#x679C;&#x548C;&#x4E3B;&#x673A;&#x53D8;&#x662F;&#x540C;&#x540D;&#xFF0C;&#x4F18;&#x5148;&#x7EA7;&#x4F4E;&#x4E8E;&#x4E3B;&#x673A;&#x53D8;&#x91CF;</p>
+<pre class="language-"><code class="lang-shell"><span class="token punctuation">[</span>root@localhost playbook<span class="token punctuation">]</span><span class="token comment"># cat /etc/ansible/hosts </span>
+<span class="token punctuation">[</span>server<span class="token punctuation">]</span>
+<span class="token number">10.47</span>.119.156 
+<span class="token number">10.47</span>.119.157 
+
+<span class="token punctuation">[</span>server:vars<span class="token punctuation">]</span>
+<span class="token assign-left variable">server_conf_path</span><span class="token operator">=</span>/etc/my.cnf.d/server.cnf
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x65F6;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x53D8;&#x91CF;&#x5373;&#x53EF;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+  <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> <span class="token string">&quot;&quot;</span>
+    <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+    <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Open mysql remote access permissions
+       <span class="token key atrule">replace</span><span class="token punctuation">:</span> path= regexp=&apos;^(bind<span class="token punctuation">-</span>address=127.0.0.1)&apos; replace=&apos;<span class="token comment">#\1&apos; backup=true</span>
+       <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart mysql
+
+    <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart mysql
+       <span class="token key atrule">service</span><span class="token punctuation">:</span> name=mysql state=restarted
+</code></pre>
+<hr>
+<h1 id="template&#x6A21;&#x677F;"><a name="template&#x6A21;&#x677F;" class="anchor-navigation-ex-anchor" href="#template&#x6A21;&#x677F;"><i class="fa fa-link" aria-hidden="true"></i></a>template&#x6A21;&#x677F;</h1>
+<h2 id="jinja2&#x8BED;&#x8A00;"><a name="jinja2&#x8BED;&#x8A00;" class="anchor-navigation-ex-anchor" href="#jinja2&#x8BED;&#x8A00;"><i class="fa fa-link" aria-hidden="true"></i></a>jinja2&#x8BED;&#x8A00;</h2>
+<p>&#x5B98;&#x7F51;&#xFF1A;<a href="https://jinja.palletsprojects.com/en/2.11.x/" target="_blank">https://jinja.palletsprojects.com/en/2.11.x/</a></p>
+<h2 id="template"><a name="template" class="anchor-navigation-ex-anchor" href="#template"><i class="fa fa-link" aria-hidden="true"></i></a>template</h2>
+<h3 id="&#x529F;&#x80FD;"><a name="&#x529F;&#x80FD;" class="anchor-navigation-ex-anchor" href="#&#x529F;&#x80FD;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x529F;&#x80FD;</h3>
+<p>&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x548C;&#x53C2;&#x8003;&#x6A21;&#x5757;&#x6587;&#x4EF6;&#xFF0C;&#x52A8;&#x6001;&#x751F;&#x6210;&#x76F8;&#x7C7B;&#x4F3C;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<h3 id="&#x8981;&#x6C42;"><a name="&#x8981;&#x6C42;" class="anchor-navigation-ex-anchor" href="#&#x8981;&#x6C42;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8981;&#x6C42;</h3>
+<p><code>template</code>&#x6587;&#x4EF6;&#x5FC5;&#x987B;&#x5B58;&#x653E;&#x4E8E;<code>templates</code>&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E14;&#x547D;&#x540D;&#x4E3A; .j2 &#x7ED3;&#x5C3E;
+<code>yaml/yml</code>&#x6587;&#x4EF6;&#x9700;&#x548C;<code>templates</code>&#x76EE;&#x5F55;&#x5E73;&#x7EA7;&#xFF0C;&#x76EE;&#x5F55;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#x793A;&#x4F8B;&#xFF1A;</p>
+<pre class="language-"><code>.
+&#x251C;&#x2500;&#x2500; config.yml
+&#x2514;&#x2500;&#x2500; templates
+    &#x2514;&#x2500;&#x2500; nginx.conf.j2
+</code></pre><h3 id="&#x793A;&#x4F8B;_2"><a name="&#x793A;&#x4F8B;_2" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># tree</span>
+<span class="token builtin class-name">.</span>
+&#x251C;&#x2500;&#x2500; config-nginx.yml
+&#x2514;&#x2500;&#x2500; templates
+    &#x2514;&#x2500;&#x2500; nginx.conf.j2
+</code></pre>
+<p>&#x8BBE;&#x7F6E;<code>nginx</code>&#x8FDB;&#x7A0B;&#x6570;&#x4E0E;<code>ansible_processor_vcpus+1</code>&#x76F8;&#x7B49;</p>
+<pre class="language-"><code class="lang-jinja2"># cat templates/nginx.conf.j2 
+
+...
+worker_processes NaN;
+...
+</code></pre>
+<p><code>playbook</code>&#x5185;&#x5BB9;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># cat config-nginx.yml </span>
+<span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span> 
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> template config to remote hosts
+     <span class="token key atrule">template</span><span class="token punctuation">:</span> src=nginx.conf.j2 dest=/etc/nginx/nginx.conf
+     <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart nginx
+
+   <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart nginx
+     <span class="token key atrule">service</span><span class="token punctuation">:</span> name=nginx state=restarted
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>setup</code>&#x6A21;&#x5757;&#x53D1;&#x73B0;<code>ansible_processor_vcpus</code>&#x503C;&#x4E3A;4&#xFF0C;&#x6240;&#x4EE5;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x5BF9;&#x5E94;<code>nginx</code>&#x5B50;&#x8FDB;&#x7A0B;&#x6570;&#x5E94;&#x4E3A;5</p>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># ansible vm -m setup -a &apos;filter=ansible_processor_vcpus&apos;          </span>
+<span class="token number">10.91</span>.156.205 <span class="token operator">|</span> SUCCESS <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token string">&quot;ansible_facts&quot;</span><span class="token builtin class-name">:</span> <span class="token punctuation">{</span>
+        <span class="token string">&quot;ansible_processor_vcpus&quot;</span><span class="token builtin class-name">:</span> <span class="token number">4</span>, 
+        <span class="token string">&quot;discovered_interpreter_python&quot;</span><span class="token builtin class-name">:</span> <span class="token string">&quot;/usr/bin/python&quot;</span>
+    <span class="token punctuation">}</span>, 
+    <span class="token string">&quot;changed&quot;</span><span class="token builtin class-name">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>&#x7EDF;&#x8BA1;<code>nginx</code>&#x5B50;&#x8FDB;&#x7A0B;&#x6570;&#x76EE;</p>
+<pre class="language-"><code class="lang-shell"><span class="token comment"># ansible vm -m &apos;shell&apos; -a &quot;ps aux | grep &apos;nginx: worker process&apos; &quot;</span>
+<span class="token number">10.91</span>.156.205 <span class="token operator">|</span> CHANGED <span class="token operator">|</span> <span class="token assign-left variable">rc</span><span class="token operator">=</span><span class="token number">0</span> <span class="token operator">&gt;&gt;</span>
+nginx    <span class="token number">24585</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105956</span>  <span class="token number">3444</span> ?        S    <span class="token number">15</span>:05   <span class="token number">0</span>:00 nginx: worker process
+nginx    <span class="token number">24586</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105956</span>  <span class="token number">3444</span> ?        S    <span class="token number">15</span>:05   <span class="token number">0</span>:00 nginx: worker process
+nginx    <span class="token number">24587</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105956</span>  <span class="token number">3444</span> ?        S    <span class="token number">15</span>:05   <span class="token number">0</span>:00 nginx: worker process
+nginx    <span class="token number">24588</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105956</span>  <span class="token number">3444</span> ?        S    <span class="token number">15</span>:05   <span class="token number">0</span>:00 nginx: worker process
+nginx    <span class="token number">24589</span>  <span class="token number">0.0</span>  <span class="token number">0.0</span> <span class="token number">105956</span>  <span class="token number">3448</span> ?        S    <span class="token number">15</span>:05   <span class="token number">0</span>:00 nginx: worker process
+<span class="token punctuation">..</span>.
+</code></pre>
+<h2 id="&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><a name="&#x6D41;&#x7A0B;&#x63A7;&#x5236;" class="anchor-navigation-ex-anchor" href="#&#x6D41;&#x7A0B;&#x63A7;&#x5236;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D41;&#x7A0B;&#x63A7;&#x5236;</h2>
+<p>template&#x4E2D;&#x53EF;&#x4F7F;&#x7528;&#x6D41;&#x7A0B;&#x63A7;&#x5236; for &#x5FAA;&#x73AF;&#x548C; if &#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;&#x5B9E;&#x73B0;&#x52A8;&#x6001;&#x751F;&#x6210;&#x6587;&#x4EF6;&#x529F;&#x80FD;</p>
+<h3 id="for&#x5FAA;&#x73AF;"><a name="for&#x5FAA;&#x73AF;" class="anchor-navigation-ex-anchor" href="#for&#x5FAA;&#x73AF;"><i class="fa fa-link" aria-hidden="true"></i></a>for&#x5FAA;&#x73AF;</h3>
+<p>&#x793A;&#x4F8B;</p>
+<p><code>j2</code>&#x6587;&#x4EF6;&#xFF1A;</p>
+<pre class="language-"><code class="lang-jinja2"> ...
+
+...
+</code></pre>
+<p><code>playbook</code>&#x6587;&#x4EF6;&#x4E2D;<code>src</code>&#x6307;&#x5B9A;<code>j2</code>&#x6587;&#x4EF6;&#xFF0C;&#x62F7;&#x8D1D;&#x5230;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x540E;&#x8BB0;&#x5F97;&#x8981;&#x4FEE;&#x6539;&#x540D;&#x79F0;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+   <span class="token key atrule">vars</span><span class="token punctuation">:</span> 
+     <span class="token key atrule">listen_ports</span><span class="token punctuation">:</span>
+     <span class="token punctuation">-</span> <span class="token number">8888</span>
+     <span class="token punctuation">-</span> <span class="token number">8889</span>
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span> 
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> template config to remote hosts
+     <span class="token key atrule">template</span><span class="token punctuation">:</span> src=nginx<span class="token punctuation">-</span>server.conf.j2 dest=/etc/nginx/nginx.conf backup=true
+     <span class="token key atrule">notify</span><span class="token punctuation">:</span> restart nginx
+
+   <span class="token key atrule">handlers</span><span class="token punctuation">:</span>
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> restart nginx
+     <span class="token key atrule">service</span><span class="token punctuation">:</span> name=nginx state=restarted
+</code></pre>
+<p>&#x9A8C;&#x8BC1;&#x53D1;&#x73B0;&#x670D;&#x52A1;&#x5668;<code>nginx.cnf</code>&#x4E2D;&#x591A;&#x51FA;&#x4E86;8888&#xFF0C;8889&#x4E24;&#x4E2A;server</p>
+<pre class="language-"><code class="lang-nginx"><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>  
+    <span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span> <span class="token number">8888</span><span class="token punctuation">;</span>
+        <span class="token keyword">root</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html<span class="token punctuation">;</span>
+
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span> <span class="token number">8889</span><span class="token punctuation">;</span>
+        <span class="token keyword">root</span> <span class="token operator">/</span>usr<span class="token operator">/</span>share<span class="token operator">/</span>nginx<span class="token operator">/</span>html<span class="token punctuation">;</span>
+
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+</code></pre>
+<p>&#x82E5;<code>vars</code>&#x4E2D;&#x53D8;&#x91CF;&#x662F;&#x5B57;&#x5178;&#x5F62;&#x5F0F;&#xFF0C;&#x5F62;&#x5982;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token key atrule">vars</span><span class="token punctuation">:</span>
+    <span class="token key atrule">nginx_vhosts</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">listen</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+        <span class="token key atrule">server_name</span><span class="token punctuation">:</span> <span class="token string">&quot;web1.magedu.com&quot;</span>
+        <span class="token key atrule">root</span><span class="token punctuation">:</span> <span class="token string">&quot;/var/www/nginx/web1/&quot;</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">listen</span><span class="token punctuation">:</span> <span class="token number">8081</span>
+        <span class="token key atrule">server_name</span><span class="token punctuation">:</span> <span class="token string">&quot;web2.magedu.com&quot;</span>
+        <span class="token key atrule">root</span><span class="token punctuation">:</span> <span class="token string">&quot;/var/www/nginx/web2/&quot;</span>
+</code></pre>
+<p>jinja2&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#x8C03;&#x7528;</p>
+<pre class="language-"><code class="lang-jinja2">
+
+</code></pre>
+<h3 id="if-&#x5224;&#x65AD;"><a name="if-&#x5224;&#x65AD;" class="anchor-navigation-ex-anchor" href="#if-&#x5224;&#x65AD;"><i class="fa fa-link" aria-hidden="true"></i></a>if &#x5224;&#x65AD;</h3>
+<p>&#x5728;&#x6A21;&#x677F;&#x6587;&#x4EF6;&#x4E2D;&#x53EF;&#x901A;&#x8FC7;&#x6761;&#x4EF6;&#x5224;&#x65AD;&#xFF0C;&#x6765;&#x51B3;&#x5B9A;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x5F97;&#x751F;&#x6210;&#x4FE1;&#x606F;&#x3002;&#x4F8B;&#x5982;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token comment"># cat if-config.yml</span>
+<span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+   <span class="token key atrule">vars</span><span class="token punctuation">:</span>
+     <span class="token key atrule">nginx_vhosts</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">listen</span><span class="token punctuation">:</span> <span class="token number">80</span>
+        <span class="token key atrule">server_name</span><span class="token punctuation">:</span> <span class="token string">&quot;server1&quot;</span>
+        <span class="token key atrule">root</span><span class="token punctuation">:</span> <span class="token string">&quot;/var/www/nginx/web1&quot;</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">listen</span><span class="token punctuation">:</span> <span class="token number">8080</span>
+        <span class="token key atrule">root</span><span class="token punctuation">:</span> <span class="token string">&quot;var/www/nginx/web2&quot;</span>
+
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> template config if exp
+      <span class="token key atrule">template</span><span class="token punctuation">:</span> src=if<span class="token punctuation">-</span>config.cnf.j2 dest=/root/if<span class="token punctuation">-</span>config.cnf
+</code></pre>
+<p>&#x6A21;&#x677F;&#x6587;&#x4EF6;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/image-20210106171553159.png" data-lightbox="dde20192-7b9a-438b-aace-c149c7fbd38d" data-title="image-20210106171553159" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/image-20210106171553159.png" alt="image-20210106171553159"></a></p>
+<p>&#x6700;&#x7EC8;&#x751F;&#x6210;&#x7ED3;&#x679C;</p>
+<pre class="language-"><code class="lang-nginx"><span class="token comment">#&#x7ED3;&#x679C;</span>
+<span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span> <span class="token number">80</span>
+    <span class="token keyword">server_name</span> server1
+    <span class="token keyword">root</span> <span class="token operator">/</span>var<span class="token operator">/</span>www<span class="token operator">/</span>nginx<span class="token operator">/</span>web1
+<span class="token punctuation">}</span>
+<span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span> <span class="token number">8080</span>
+    <span class="token keyword">root</span> var<span class="token operator">/</span>www<span class="token operator">/</span>nginx<span class="token operator">/</span>web2
+<span class="token punctuation">}</span>
+</code></pre>
+<h1 id="playbook&#x4F7F;&#x7528;when"><a name="playbook&#x4F7F;&#x7528;when" class="anchor-navigation-ex-anchor" href="#playbook&#x4F7F;&#x7528;when"><i class="fa fa-link" aria-hidden="true"></i></a>playbook&#x4F7F;&#x7528;when</h1>
+<p>when&#x8BED;&#x53E5;&#xFF0C;&#x53EF;&#x5B9E;&#x73B0;&#x6761;&#x4EF6;&#x6D4B;&#x8BD5;&#x3002;&#x5982;&#x679C;&#x9700;&#x8981;&#x6839;&#x636E;&#x53D8;&#x91CF;&#xFF0C;facts&#x6216;&#x6B64;&#x524D;&#x4EFB;&#x52A1;&#x5F97;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x6765;&#x4F5C;&#x4E3A;&#x67D0;task&#x6267;&#x884C;&#x4E0E;&#x5426;&#x7684;&#x524D;&#x63D0;&#x65F6;&#x8981;&#x7528;&#x5230;&#x6761;&#x4EF6;&#x6D4B;&#x8BD5;&#x3002;&#x901A;&#x8FC7;&#x5728;task&#x540E;&#x6DFB;&#x52A0;when&#x5B50;&#x53E5;&#x5373;&#x53EF;&#x4F7F;&#x7528;&#x6761;&#x4EF6;&#x6D4B;&#x8BD5;&#x3002;</p>
+<h2 id="&#x793A;&#x4F8B;_3"><a name="&#x793A;&#x4F8B;_3" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<p>&#x5982;&#x679C;<code>ansible_os_family</code>&#x503C;&#x4E3A;<code>RedHat</code>&#x5219;&#x521B;&#x5EFA;<code>/root/redhat</code>&#x76EE;&#x5F55;&#xFF0C;&#x5426;&#x5219;&#x521B;&#x5EFA;<code>/root/others</code>&#x76EE;&#x5F55;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mkdir redhat dir
+     <span class="token key atrule">shell</span><span class="token punctuation">:</span> mkdir /root/redhat
+     <span class="token key atrule">when</span><span class="token punctuation">:</span> ansible_os_family == &quot;RedHat&quot;
+   <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> mkdir other dir
+     <span class="token key atrule">shell</span><span class="token punctuation">:</span> mkdir /root/otherOs
+     <span class="token key atrule">when</span><span class="token punctuation">:</span> ansible_os_family <span class="token tag">!=</span> &quot;RedHat&quot;
+</code></pre>
+<hr>
+<h1 id="&#x8FED;&#x4EE3;withitems"><a name="&#x8FED;&#x4EE3;withitems" class="anchor-navigation-ex-anchor" href="#&#x8FED;&#x4EE3;withitems"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8FED;&#x4EE3;with_items</h1>
+<h2 id="&#x4F5C;&#x7528;_2"><a name="&#x4F5C;&#x7528;_2" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<p>&#x5F53;&#x6709;&#x9700;&#x8981;&#x91CD;&#x590D;&#x6027;&#x6267;&#x884C;&#x7684;&#x4EFB;&#x52A1;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FED;&#x4EE3;&#x673A;&#x5236;&#x3002;&#x5BF9;&#x8FED;&#x4EE3;&#x9879;&#x7684;&#x5F15;&#x7528;&#xFF0C;&#x56FA;&#x5B9A;&#x53D8;&#x91CF;&#x540D;&#x4E3A;&quot;item&quot;&#x3002;&#x8981;&#x5728;<code>task</code>&#x4E2D;&#x4F7F;&#x7528;<code>with_items</code>&#x7ED9;&#x5B9A;&#x8981;&#x8FED;&#x4EE3;&#x7684;&#x5143;&#x7D20;&#x5217;&#x8868;</p>
+<h2 id="&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;"><a name="&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5217;&#x8868;&#x5143;&#x7D20;&#x683C;&#x5F0F;</h2>
+<ul>
+<li>&#x5B57;&#x7B26;&#x4E32;</li>
+</ul>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> install tools
+      <span class="token key atrule">yum</span><span class="token punctuation">:</span> name= state=installed
+      <span class="token key atrule">with_items</span><span class="token punctuation">:</span>
+       <span class="token punctuation">-</span> lrzsz
+       <span class="token punctuation">-</span> wget
+</code></pre>
+<p>&#x7B49;&#x540C;&#x4E8E;</p>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> install lrzsz
+      <span class="token key atrule">yum</span><span class="token punctuation">:</span> name=lrzsz state=installed
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> install wget
+      <span class="token key atrule">yum</span><span class="token punctuation">:</span> name=wget state=installed
+</code></pre>
+<ul>
+<li>&#x5B57;&#x5178;</li>
+</ul>
+<pre class="language-"><code class="lang-yaml"><span class="token punctuation">---</span>
+ <span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> vm
+   <span class="token key atrule">gather_facts</span><span class="token punctuation">:</span> no
+
+   <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> copy config file
+      <span class="token key atrule">copy</span><span class="token punctuation">:</span> src= dest=
+      <span class="token key atrule">with_items</span><span class="token punctuation">:</span>
+       <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">src</span><span class="token punctuation">:</span> /root/src1.cnf<span class="token punctuation">,</span> <span class="token key atrule">dest</span><span class="token punctuation">:</span> /root/dest1.txt <span class="token punctuation">}</span>
+       <span class="token punctuation">-</span> <span class="token punctuation">{</span> <span class="token key atrule">src</span><span class="token punctuation">:</span> /root/src2.cnf<span class="token punctuation">,</span> <span class="token key atrule">dest</span><span class="token punctuation">:</span> /root/dest2.txt <span class="token punctuation">}</span>
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="常用模块.html" class="navigation navigation-prev " aria-label="Previous page: 常用模块">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="roles角色.html" class="navigation navigation-next " aria-label="Next page: Roles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Playbook","level":"1.3.3","depth":2,"next":{"title":"Roles","level":"1.3.4","depth":2,"path":"ansible/roles角色.md","ref":"ansible/roles角色.md","articles":[]},"previous":{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"images/golang.png","style":"background: none; max-height: 120px; min-height: 120px"},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"ansible/Playbook.md","mtime":"2021-01-06T09:17:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-05T18:46:37.245Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,484 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>supervisor · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="vsftpd.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.2.1" data-path="supervisor.html">
+            
+                <a href="supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="vsftpd.html">
+            
+                <a href="vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ansible/安装介绍.html">
+            
+                <a href="../ansible/安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ansible/常用模块.html">
+            
+                <a href="../ansible/常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ansible/Playbook.html">
+            
+                <a href="../ansible/Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ansible/roles角色.html">
+            
+                <a href="../ansible/roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >supervisor</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x7B80;&#x4ECB;"><b></b>&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x4FE1;&#x606F;"><b></b>&#x73AF;&#x5883;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b></b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x7BA1;&#x7406;redis"><b></b>&#x7BA1;&#x7406;redis</a></li><ul><li><span class="title-icon "></span><a href="#&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><b></b>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</a></li><li><span class="title-icon "></span><a href="#&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;"><b></b>&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x72B6;&#x6001;"><b></b>&#x67E5;&#x770B;&#x72B6;&#x6001;</a></li></ul><li><span class="title-icon "></span><a href="#supervisorctl&#x64CD;&#x4F5C;"><b></b>supervisorctl&#x64CD;&#x4F5C;</a></li></ul></div><a href="#&#x7B80;&#x4ECB;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x7B80;&#x4ECB;"><a name="&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7B80;&#x4ECB;</h1>
+<p><code>Supervisor</code> &#x662F;&#x53EF;&#x4EE5;&#x5728;&#x7C7B; <code>UNIX</code> &#x7CFB;&#x7EDF;&#x4E2D;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x548C;&#x76D1;&#x63A7;&#x5404;&#x79CD;&#x8FDB;&#x7A0B;&#x7684;&#x5C0F;&#x578B;&#x7CFB;&#x7EDF;&#x3002;&#x5B83;&#x81EA;&#x5E26;&#x4E86;&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x670D;&#x52A1;&#x7AEF;&#x5DE5;&#x5177;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7528;&#x6237;&#x6240;&#x5B9A;&#x4E49;&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x6765;&#x7BA1;&#x7406;&#x548C;&#x76D1;&#x63A7;&#x5355;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x5B83;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x914D;&#x7F6E;&#x6765;&#x5BF9;&#x5F02;&#x5E38;&#x5D29;&#x6E83;&#x7684;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x91CD;&#x542F;&#x64CD;&#x4F5C;&#x3002;</p>
+<hr>
+<h1 id="&#x73AF;&#x5883;&#x4FE1;&#x606F;"><a name="&#x73AF;&#x5883;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x4FE1;&#x606F;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># cat /etc/redhat-release</span>
+CentOS Linux release <span class="token number">7.7</span>.1908 <span class="token punctuation">(</span>Core<span class="token punctuation">)</span>
+</code></pre>
+<hr>
+<h1 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># yum install epel-release</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># yum install -y supervisor</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># systemctl enable supervisord # &#x5F00;&#x673A;&#x81EA;&#x542F;&#x52A8;</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># systemctl start supervisord # &#x542F;&#x52A8;supervisord&#x670D;&#x52A1;</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># systemctl status supervisord # &#x67E5;&#x770B;supervisord&#x670D;&#x52A1;&#x72B6;&#x6001;</span>
+</code></pre>
+<hr>
+<h1 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h1>
+<p>&#x914D;&#x7F6E;&#x9009;&#x9879;&#x53EF;&#x5177;&#x4F53;&#x53C2;&#x8003;<code>/etc/supervisord.conf</code>&#x4E2D;&#x7684;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;&#xFF0C;&#x6216;&#x8005;&#x53EF;&#x53C2;&#x8003;<a href="http://supervisord.org/" target="_blank">http://supervisord.org/</a></p>
+<p>&#x82E5;&#x60F3;&#x65B0;&#x589E;&#x8981;&#x7BA1;&#x7406;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x76F4;&#x63A5;&#x5728;<code>supervisor</code>&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x9ED8;&#x8BA4;&#x76EE;&#x5F55;<code>/etc/supervisord.d/</code>&#x4E0B;&#x6DFB;&#x52A0;<code>ini</code>&#x6587;&#x4EF6;&#x5373;&#x53EF;&#xFF0C;&#x5728;<code>/etc/supervisord.conf</code>&#x4E2D;&#x5DF2;&#x5B9A;&#x4E49;&#x4F1A;&#x5C06;<code>/etc/supervisord.d/</code>&#x76EE;&#x5F55;&#x4E0B;&#x6240;&#x6709;&#x7684;<code>ini</code>&#x6587;&#x4EF6;&#x90FD;&#x4F1A;&#x5305;&#x542B;&#x8FDB;&#x6765;&#x3002;</p>
+<pre class="language-"><code class="lang-ini">...
+<span class="token selector">[include]</span>
+<span class="token constant">files</span> <span class="token attr-value"><span class="token punctuation">=</span> supervisord.d/*.ini</span>
+</code></pre>
+<hr>
+<h1 id="&#x7BA1;&#x7406;redis"><a name="&#x7BA1;&#x7406;redis" class="anchor-navigation-ex-anchor" href="#&#x7BA1;&#x7406;redis"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7BA1;&#x7406;<code>redis</code></h1>
+<p>&#x6BCF;&#x4E2A; <code>program</code> &#x4EE3;&#x8868;&#x4E86;&#x4E00;&#x4E2A;&#x8981;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x7684;&#x8FDB;&#x7A0B;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x91CC;&#x8FDB;&#x884C;&#x8FDB;&#x7A0B;&#x7684;&#x76F8;&#x5173;&#x914D;&#x7F6E;&#x3002;</p>
+<h2 id="&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><a name="&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;" class="anchor-navigation-ex-anchor" href="#&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F16;&#x8F91;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<p>&#x5047;&#x8BBE;&#x6B64;&#x65F6;&#x9700;&#x8981;&#x4F7F;&#x7528;<code>supervisor</code>&#x7BA1;&#x7406;<code>redis-server</code>&#xFF0C;&#x7F16;&#x8F91;<code>/etc/supervisord.d/redis.ini</code></p>
+<pre class="language-"><code class="lang-ini"><span class="token comment"># &#x9879;&#x76EE;&#x540D;</span>
+<span class="token selector">[program:redis]</span>
+<span class="token comment"># &#x811A;&#x672C;&#x6267;&#x884C;&#x547D;&#x4EE4;</span>
+<span class="token constant">command</span><span class="token attr-value"><span class="token punctuation">=</span>/usr/bin/redis-server /etc/redis.conf</span>
+<span class="token comment"># &#x5F53;&#x8FDB;&#x7A0B;&#x6570;&#x4E3A; 1 &#x65F6; &#x4E3A; %(program_name)s </span>
+<span class="token comment"># &#x5F53;&#x8FDB;&#x7A0B;&#x6570; &gt;1 &#x65F6; &#x5E94;&#x914D;&#x7F6E;&#x4E3A; %(program_name)s_%(process_num)02d</span>
+<span class="token constant">process_name</span><span class="token attr-value"><span class="token punctuation">=</span>%(program_name)s</span>
+
+<span class="token comment"># &#x5982;&#x679C;numprocs&gt;1&#xFF0C;supervisor&#x542F;&#x52A8;&#x5F53;&#x524D;program&#x65F6;&#x4F1A;&#x5B9E;&#x4F8B;&#x5316;&#x597D;&#x51E0;&#x4E2A;&#x5B50;&#x8FDB;&#x7A0B;&#xFF0C;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x53D6;1</span>
+<span class="token constant">numprocs</span><span class="token attr-value"><span class="token punctuation">=</span>1</span>
+<span class="token comment"># supervisord&#x4F5C;&#x4E3A;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x8F6C;&#x6362;&#x8DEF;&#x5F84;&#x5230;&#x8BE5;&#x76EE;&#x5F55;</span>
+<span class="token constant">directory</span><span class="token attr-value"><span class="token punctuation">=</span>/suhw/data/redis</span>
+<span class="token comment"># supervisord&#x8FDB;&#x7A0B;&#x7684;&#x6587;&#x4EF6;&#x6743;&#x9650;&#x63A9;&#x7801;&#xFF0C;&#x9ED8;&#x8BA4; 022</span>
+<span class="token constant">umask</span><span class="token attr-value"><span class="token punctuation">=</span>022</span>
+<span class="token comment"># &#x8FDB;&#x7A0B;&#x542F;&#x52A8;&#x4F18;&#x5148;&#x7EA7;&#xFF0C;&#x9ED8;&#x8BA4;999&#xFF0C;&#x503C;&#x5C0F;&#x7684;&#x4F18;&#x5148;&#x542F;&#x52A8;</span>
+<span class="token constant">priority</span><span class="token attr-value"><span class="token punctuation">=</span>999</span>
+
+<span class="token comment"># supervisor&#x542F;&#x52A8;&#x65F6;&#x662F;&#x5426;&#x8DDF;&#x968F;&#x540C;&#x65F6;&#x542F;&#x52A8;(&#x9ED8;&#x8BA4;&#x4E3A;true)</span>
+<span class="token constant">autostart</span><span class="token attr-value"><span class="token punctuation">=</span>true</span>
+<span class="token comment"># &#x542F;&#x52A8;1&#x79D2;&#x540E;&#x6CA1;&#x6709;&#x5F02;&#x5E38;&#x9000;&#x51FA;&#xFF0C;&#x5C31;&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#x4E86;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;1&#x79D2;</span>
+<span class="token constant">startsecs</span><span class="token attr-value"><span class="token punctuation">=</span>2</span>
+<span class="token comment"># &#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x540E;&#x81EA;&#x52A8;&#x91CD;&#x542F;,&#x53EF;&#x9009;&#x503C;&#xFF1A;[unexpected,true,false]&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;unexpected&#xFF0C;&#x8868;&#x793A;&#x8FDB;&#x7A0B;&#x610F;&#x5916;&#x6740;&#x6B7B;&#x540E;&#x624D;&#x91CD;&#x542F;</span>
+<span class="token constant">autorestart</span><span class="token attr-value"><span class="token punctuation">=</span>true</span>
+<span class="token comment"># &#x542F;&#x52A8;&#x5931;&#x8D25;&#x81EA;&#x52A8;&#x91CD;&#x8BD5;&#x6B21;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;3</span>
+<span class="token constant">startretries</span><span class="token attr-value"><span class="token punctuation">=</span>100</span>
+
+<span class="token comment"># &#x811A;&#x672C;&#x8FD0;&#x884C;&#x7684;&#x7528;&#x6237;&#x8EAB;&#x4EFD; </span>
+<span class="token comment"># user=csmp</span>
+<span class="token comment"># &#x628A;stderr&#x91CD;&#x5B9A;&#x5411;&#x5230;stdout&#xFF0C;&#x9ED8;&#x8BA4; false</span>
+<span class="token constant">redirect_stderr</span><span class="token attr-value"><span class="token punctuation">=</span>true</span>
+<span class="token comment"># &#x65E5;&#x5FD7;&#x8F93;&#x51FA;</span>
+<span class="token constant">stdout_logfile</span><span class="token attr-value"><span class="token punctuation">=</span>/suhw/data/redis/logs/%(program_name)s-stdout.log</span>
+<span class="token comment"># stdout&#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x9ED8;&#x8BA4; 50MB</span>
+<span class="token constant">stdout_logfile_maxbytes</span><span class="token attr-value"><span class="token punctuation">=</span>10MB</span>
+<span class="token comment"># stdout &#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x5907;&#x4EFD;&#x6570;</span>
+<span class="token constant">stdout_logfile_backups</span><span class="token attr-value"><span class="token punctuation">=</span>10</span>
+<span class="token comment"># &#x5F53;&#x8FDB;&#x7A0B;&#x5904;&#x4E8E;stdout capture mode&#x6A21;&#x5F0F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5199;&#x5165;capture FIFO&#x7684;&#x6700;&#x5927;&#x5B57;&#x8282;&#x6570;&#x9650;&#x5236;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x6B64;&#x65F6;&#x8BA4;&#x4E3A;stdout capture mode&#x6A21;&#x5F0F;&#x5173;&#x95ED;&#xFF1B;</span>
+<span class="token constant">stdout_capture_maxbytes</span><span class="token attr-value"><span class="token punctuation">=</span>10MB</span>
+</code></pre>
+<h2 id="&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;"><a name="&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x65B0;&#x8F7D;&#x5165;&#x914D;&#x7F6E;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># &#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;&#x5E76;&#x6839;&#x636E;&#x9700;&#x8981;&#x6DFB;&#x52A0;/&#x5220;&#x9664;&#xFF0C;&#x5E76;&#x5C06;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x53D7;&#x5F71;&#x54CD;&#x7684;&#x7A0B;&#x5E8F;</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># supervisorctl update</span>
+<span class="token comment"># &#x91CD;&#x65B0;&#x8F7D;&#x5165; supervisord</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># supervisorctl reload</span>
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x72B6;&#x6001;"><a name="&#x67E5;&#x770B;&#x72B6;&#x6001;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x72B6;&#x6001;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x72B6;&#x6001;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># supervisorctl status</span>
+redis                            RUNNING   pid <span class="token number">19573</span>, <span class="token function">uptime</span> <span class="token number">0</span>:00:18
+</code></pre>
+<p>&#x6B64;&#x65F6;<code>redis</code>&#x670D;&#x52A1;&#x5DF2;&#x7ECF;&#x88AB;<code>supervisor</code>&#x6240;&#x63A5;&#x7BA1;&#x4E86;&#xFF0C;&#x6211;&#x4EEC;&#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x901A;&#x8FC7;<code>supervisorctl</code>&#x8FDB;&#x884C;&#x670D;&#x52A1;&#x7684;&#x64CD;&#x4F5C;</p>
+<hr>
+<h1 id="supervisorctl&#x64CD;&#x4F5C;"><a name="supervisorctl&#x64CD;&#x4F5C;" class="anchor-navigation-ex-anchor" href="#supervisorctl&#x64CD;&#x4F5C;"><i class="fa fa-link" aria-hidden="true"></i></a><code>supervisorctl</code>&#x64CD;&#x4F5C;</h1>
+<p><code>supervisorctl</code> &#x662F; <code>supervisord</code> &#x7684;&#x547D;&#x4EE4;&#x884C;&#x5BA2;&#x6237;&#x7AEF;&#x5DE5;&#x5177;&#xFF0C;&#x76F4;&#x63A5;&#x8F93;&#x5165;<code>supervisorctl</code>&#x53EF;&#x8FDB;&#x5165;&#x4EA4;&#x4E92;&#x754C;&#x9762;&#xFF0C;&#x4E5F;&#x53EF;&#x76F4;&#x63A5;&#x8F93;&#x5165;<code>shell</code>&#x547D;&#x4EE4;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># supervisorctl</span>
+redis                            RUNNING   pid <span class="token number">19573</span>, <span class="token function">uptime</span> <span class="token number">0</span>:20:06
+supervisor<span class="token operator">&gt;</span> <span class="token builtin class-name">help</span>
+
+default commands <span class="token punctuation">(</span>type <span class="token builtin class-name">help</span> <span class="token operator">&lt;</span>topic<span class="token operator">&gt;</span><span class="token punctuation">)</span>:
+<span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">==</span><span class="token operator">=</span>
+<span class="token function">add</span>    <span class="token builtin class-name">exit</span>      <span class="token function">open</span>  reload  restart   start   <span class="token function">tail</span>
+avail  <span class="token function">fg</span>        pid   remove  <span class="token function">shutdown</span>  status  update
+<span class="token function">clear</span>  maintail  quit  reread  signal    stop    version
+</code></pre>
+<p><code>supervisorctl</code>&#x53EF;&#x9009;&#x53C2;&#x6570;&#x5982;&#x4E0A;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4EA4;&#x4E92;&#x6A21;&#x5F0F;&#x4E2D;&#x8F93;&#x5165; <code>help xxx</code>&#x67E5;&#x770B;&#x5BF9;&#x5E94;&#x547D;&#x4EE4;&#x7684;&#x4F5C;&#x7528;&#xFF0C;&#x4E3E;&#x4F8B;&#x5982;&#x4E0B;</p>
+<pre class="language-"><code class="lang-bash">supervisor<span class="token operator">&gt;</span> <span class="token builtin class-name">help</span> reload
+reload          Restart the remote supervisord.
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Linux">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="vsftpd.html" class="navigation navigation-next " aria-label="Next page: vsftpd">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"supervisor","level":"1.2.1","depth":2,"next":{"title":"vsftpd","level":"1.2.2","depth":2,"path":"linux/vsftpd.md","ref":"linux/vsftpd.md","articles":[]},"previous":{"title":"Linux","level":"1.2","depth":1,"path":"linux/README.md","ref":"linux/README.md","articles":[{"title":"supervisor","level":"1.2.1","depth":2,"path":"linux/supervisor.md","ref":"linux/supervisor.md","articles":[]},{"title":"vsftpd","level":"1.2.2","depth":2,"path":"linux/vsftpd.md","ref":"linux/vsftpd.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"images/golang.png","style":"background: none; max-height: 120px; min-height: 120px"},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"linux/supervisor.md","mtime":"2021-01-06T07:26:58.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-05T18:46:37.245Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
