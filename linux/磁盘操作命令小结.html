@@ -1,0 +1,680 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>磁盘操作命令小结 · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="LVM逻辑卷的创建与扩容.html" />
+    
+    
+    <link rel="prev" href="LDAP统一认证服务.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="NFS配置.html">
+            
+                <a href="NFS配置.html">
+            
+                    
+                    NFS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="vsftpd.html">
+            
+                <a href="vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="supervisor.html">
+            
+                <a href="supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="SSH信任关系.html">
+            
+                <a href="SSH信任关系.html">
+            
+                    
+                    SSH信任关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="LDAP统一认证服务.html">
+            
+                <a href="LDAP统一认证服务.html">
+            
+                    
+                    LDAP统一认证服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.6" data-path="磁盘操作命令小结.html">
+            
+                <a href="磁盘操作命令小结.html">
+            
+                    
+                    磁盘操作命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="LVM逻辑卷的创建与扩容.html">
+            
+                <a href="LVM逻辑卷的创建与扩容.html">
+            
+                    
+                    LVM逻辑卷的创建与扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ansible/安装介绍.html">
+            
+                <a href="../ansible/安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ansible/常用模块.html">
+            
+                <a href="../ansible/常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ansible/Playbook.html">
+            
+                <a href="../ansible/Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ansible/roles角色.html">
+            
+                <a href="../ansible/roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    杂七杂八
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../other/GitBook搭建发布.html">
+            
+                <a href="../other/GitBook搭建发布.html">
+            
+                    
+                    GitBook搭建发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >磁盘操作命令小结</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#df"><b></b>df</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;"><b></b>&#x793A;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x53C2;&#x6570;"><b></b>&#x5E38;&#x7528;&#x53C2;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#du"><b></b>du</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_1"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_1"><b></b>&#x793A;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x53C2;&#x6570;_1"><b></b>&#x5E38;&#x7528;&#x53C2;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#fdisk"><b></b>fdisk</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_2"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_2"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#lsblk"><b></b>lsblk</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_3"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_3"><b></b>&#x793A;&#x4F8B;</a></li><li><span class="title-icon "></span><a href="#&#x5B57;&#x6BB5;&#x89E3;&#x91CA;"><b></b>&#x5B57;&#x6BB5;&#x89E3;&#x91CA;</a></li><li><span class="title-icon "></span><a href="#&#x5E38;&#x7528;&#x53C2;&#x6570;_2"><b></b>&#x5E38;&#x7528;&#x53C2;&#x6570;</a></li></ul><li><span class="title-icon "></span><a href="#blkid"><b></b>blkid</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_4"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_4"><b></b>&#x793A;&#x4F8B;</a></li></ul><li><span class="title-icon "></span><a href="#parted"><b></b>parted</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F5C;&#x7528;_5"><b></b>&#x4F5C;&#x7528;</a></li><li><span class="title-icon "></span><a href="#&#x793A;&#x4F8B;_5"><b></b>&#x793A;&#x4F8B;</a></li></ul></ul></div><a href="#df" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><p>&#x4EE5;&#x4E0B;&#x51E0;&#x4E2A;&#x547D;&#x4EE4;&#x5728;&#x64CD;&#x4F5C;&#x78C1;&#x76D8;&#x65F6;&#x5BB9;&#x6613;&#x641E;&#x6DF7;&#xFF0C;&#x7279;&#x6B64;&#x68B3;&#x7406;&#x4E00;&#x4E0B;&#x5404;&#x81EA;&#x7684;&#x4F7F;&#x7528;&#x573A;&#x666F;</p>
+<hr>
+<h1 id="df"><a name="df" class="anchor-navigation-ex-anchor" href="#df"><i class="fa fa-link" aria-hidden="true"></i></a>df</h1>
+<h2 id="&#x4F5C;&#x7528;"><a name="&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token function">df</span> - report <span class="token function">file</span> system disk space usage
+</code></pre>
+<p>&#x7528;&#x4E8E;&#x5C55;&#x793A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x78C1;&#x76D8;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<h2 id="&#x793A;&#x4F8B;"><a name="&#x793A;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># df -hT</span>
+Filesystem                Type      Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   xfs        17G 1013M   16G   <span class="token number">6</span>% /
+devtmpfs                  devtmpfs  <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /dev
+tmpfs                     tmpfs     <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /dev/shm
+tmpfs                     tmpfs     <span class="token number">3</span>.9G   41M  <span class="token number">3</span>.8G   <span class="token number">2</span>% /run
+tmpfs                     tmpfs     <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /sys/fs/cgroup
+/dev/sda1                 xfs      1014M  145M  870M  <span class="token number">15</span>% /boot
+tmpfs                     tmpfs     783M     <span class="token number">0</span>  783M   <span class="token number">0</span>% /run/user/0
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x53C2;&#x6570;"><a name="&#x5E38;&#x7528;&#x53C2;&#x6570;" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x53C2;&#x6570;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x53C2;&#x6570;</h2>
+<pre class="language-"><code>-h, --human-readable  &#x7528;&#x6613;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x6253;&#x5370;&#x5927;&#x5C0F; (e.g., 1K 234M 2G)
+-T, --print-type      &#x6253;&#x5370;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;
+</code></pre><hr>
+<h1 id="du"><a name="du" class="anchor-navigation-ex-anchor" href="#du"><i class="fa fa-link" aria-hidden="true"></i></a>du</h1>
+<h2 id="&#x4F5C;&#x7528;_1"><a name="&#x4F5C;&#x7528;_1" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code>du - estimate file space usage
+</code></pre><p>&#x7528;&#x4E8E;&#x4F30;&#x8BA1;&#x6587;&#x4EF6;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#x60C5;&#x51B5;</p>
+<h2 id="&#x793A;&#x4F8B;_1"><a name="&#x793A;&#x4F8B;_1" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># du -h file.txt </span>
+<span class="token number">4</span>.0K    file.txt
+</code></pre>
+<h2 id="&#x5E38;&#x7528;&#x53C2;&#x6570;_1"><a name="&#x5E38;&#x7528;&#x53C2;&#x6570;_1" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x53C2;&#x6570;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x53C2;&#x6570;</h2>
+<pre class="language-"><code>-h, --human-readable  &#x7528;&#x6613;&#x8BFB;&#x7684;&#x65B9;&#x5F0F;&#x6253;&#x5370;&#x5927;&#x5C0F; (e.g., 1K 234M 2G)
+</code></pre><hr>
+<h1 id="fdisk"><a name="fdisk" class="anchor-navigation-ex-anchor" href="#fdisk"><i class="fa fa-link" aria-hidden="true"></i></a>fdisk</h1>
+<h2 id="&#x4F5C;&#x7528;_2"><a name="&#x4F5C;&#x7528;_2" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code>fdisk - manipulate disk partition table
+</code></pre><p>&#x64CD;&#x4F5C;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x8868;</p>
+<h2 id="&#x793A;&#x4F8B;_2"><a name="&#x793A;&#x4F8B;_2" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<ol>
+<li>&#x6253;&#x5370;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x4FE1;&#x606F;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># fdisk -l</span>
+
+Disk /dev/sda: <span class="token number">85.9</span> GB, <span class="token number">85899345920</span> bytes, <span class="token number">167772160</span> sectors
+Units <span class="token operator">=</span> sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+Disk label type: dos
+Disk identifier: 0x000d8731
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        <span class="token number">2048</span>     <span class="token number">2099199</span>     <span class="token number">1048576</span>   <span class="token number">83</span>  Linux
+/dev/sda2         <span class="token number">2099200</span>    <span class="token number">41943039</span>    <span class="token number">19921920</span>   8e  Linux LVM
+
+Disk /dev/mapper/centos-root: <span class="token number">18.2</span> GB, <span class="token number">18249416704</span> bytes, <span class="token number">35643392</span> sectors
+Units <span class="token operator">=</span> sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+
+
+Disk /dev/mapper/centos-swap: <span class="token number">2147</span> MB, <span class="token number">2147483648</span> bytes, <span class="token number">4194304</span> sectors
+Units <span class="token operator">=</span> sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+</code></pre>
+<ol>
+<li>&#x5BF9;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;&#x5F0F;&#x64CD;&#x4F5C;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># fdisk /dev/sda</span>
+Welcome to <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.23</span>.2<span class="token punctuation">)</span>.
+
+Changes will remain <span class="token keyword">in</span> memory only, <span class="token keyword">until</span> you decide to <span class="token function">write</span> them.
+Be careful before using the <span class="token function">write</span> command.
+
+Device does not contain a recognized partition table
+Building a new DOS disklabel with disk identifier 0x9009d40d.
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX <span class="token punctuation">(</span>SGI<span class="token punctuation">)</span> partition table
+   l   list known partition types
+   m   print this menu
+   n   <span class="token function">add</span> a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition&apos;s system <span class="token function">id</span>
+   u   change display/entry <span class="token function">units</span>
+   <span class="token function">v</span>   verify the partition table
+   w   <span class="token function">write</span> table to disk and <span class="token builtin class-name">exit</span>
+   x   extra functionality <span class="token punctuation">(</span>experts only<span class="token punctuation">)</span>
+</code></pre>
+<p>&#x6839;&#x636E;&#x63D0;&#x793A;&#x4FE1;&#x606F;&#x5BF9;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684;&#x64CD;&#x4F5C;</p>
+<hr>
+<h1 id="lsblk"><a name="lsblk" class="anchor-navigation-ex-anchor" href="#lsblk"><i class="fa fa-link" aria-hidden="true"></i></a>lsblk</h1>
+<h2 id="&#x4F5C;&#x7528;_3"><a name="&#x4F5C;&#x7528;_3" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code>lsblk - list block devices
+</code></pre><p>&#x5217;&#x51FA;&#x6240;&#x6709;&#x53EF;&#x7528;&#x5757;&#x8BBE;&#x5907;&#x4FE1;&#x606F;&#xFF0C;&#x540C;&#x65F6;&#x663E;&#x793A;&#x4ED6;&#x4EEC;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x5173;&#x7CFB;&#x3002; </p>
+<h2 id="&#x793A;&#x4F8B;_3"><a name="&#x793A;&#x4F8B;_3" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_3"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lsblk</span>
+NAME            MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda               <span class="token number">8</span>:0    <span class="token number">0</span>  80G  <span class="token number">0</span> disk 
+&#x251C;&#x2500;sda1            <span class="token number">8</span>:1    <span class="token number">0</span>   1G  <span class="token number">0</span> part /boot
+&#x2514;&#x2500;sda2            <span class="token number">8</span>:2    <span class="token number">0</span>  19G  <span class="token number">0</span> part 
+  &#x251C;&#x2500;centos-root <span class="token number">253</span>:0    <span class="token number">0</span>  17G  <span class="token number">0</span> lvm  /
+  &#x2514;&#x2500;centos-swap <span class="token number">253</span>:1    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+</code></pre>
+<h2 id="&#x5B57;&#x6BB5;&#x89E3;&#x91CA;"><a name="&#x5B57;&#x6BB5;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x5B57;&#x6BB5;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B57;&#x6BB5;&#x89E3;&#x91CA;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5B57;&#x6BB5;</th>
+<th>&#x89E3;&#x91CA;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NAME</td>
+<td>&#x5757;&#x8BBE;&#x5907;&#x540D;</td>
+</tr>
+<tr>
+<td>MAJ:MIN</td>
+<td>&#x4E3B;&#x8981;&#x548C;&#x6B21;&#x8981;&#x8BBE;&#x5907;&#x53F7;</td>
+</tr>
+<tr>
+<td>RM</td>
+<td>&#x662F;&#x5426;&#x662F;&#x53EF;&#x79FB;&#x52A8;&#x8BBE;&#x5907;</td>
+</tr>
+<tr>
+<td>SIZE</td>
+<td>&#x8BBE;&#x5907;&#x7684;&#x5BB9;&#x91CF;&#x5927;&#x5C0F;&#x4FE1;&#x606F;</td>
+</tr>
+<tr>
+<td>RO</td>
+<td>&#x662F;&#x5426;&#x4E3A;&#x53EA;&#x8BFB;</td>
+</tr>
+<tr>
+<td>TYPE</td>
+<td>&#x663E;&#x793A;&#x5757;&#x8BBE;&#x5907;&#x7C7B;&#x578B; disk&#x78C1;&#x76D8;&#xFF0C;part&#x5206;&#x533A;&#xFF0C;lvm&#x903B;&#x8F91;&#x5377;&#xFF0C;room&#x53EA;&#x8BFB;&#x5B58;&#x50A8;</td>
+</tr>
+<tr>
+<td>MOUNTPOINT</td>
+<td>&#x8BBE;&#x7F6E;&#x6302;&#x8F7D;&#x7684;&#x6302;&#x8F7D;&#x70B9;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5E38;&#x7528;&#x53C2;&#x6570;_2"><a name="&#x5E38;&#x7528;&#x53C2;&#x6570;_2" class="anchor-navigation-ex-anchor" href="#&#x5E38;&#x7528;&#x53C2;&#x6570;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5E38;&#x7528;&#x53C2;&#x6570;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@study ~<span class="token punctuation">]</span><span class="token comment"># lsblk [-dfimpt] [device]</span>
+&#x9009;&#x9879;&#x4E0E;&#x53C2;&#x6570;&#xFF1A;
+-d  &#xFF1A;&#x4EC5;&#x5217;&#x51FA;&#x78C1;&#x76D8;&#x672C;&#x8EAB;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x5217;&#x51FA;&#x8BE5;&#x78C1;&#x76D8;&#x7684;&#x5206;&#x533A;&#x6570;&#x636E;
+-f  &#xFF1A;&#x540C;&#x65F6;&#x5217;&#x51FA;&#x8BE5;&#x78C1;&#x76D8;&#x5185;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x540D;&#x79F0;
+-i  &#xFF1A;&#x4F7F;&#x7528; ASCII &#x7684;&#x7EBF;&#x6BB5;&#x8F93;&#x51FA;&#xFF0C;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x590D;&#x6742;&#x7684;&#x7F16;&#x7801; &#xFF08;&#x518D;&#x67D0;&#x4E9B;&#x73AF;&#x5883;&#x4E0B;&#x5F88;&#x6709;&#x7528;&#xFF09;
+-m  &#xFF1A;&#x540C;&#x65F6;&#x8F93;&#x51FA;&#x8BE5;&#x8BBE;&#x5907;&#x5728; /dev &#x4E0B;&#x9762;&#x7684;&#x6743;&#x9650;&#x6570;&#x636E; &#xFF08;rwx &#x7684;&#x6570;&#x636E;&#xFF09;
+-p  &#xFF1A;&#x5217;&#x51FA;&#x8BE5;&#x8BBE;&#x5907;&#x7684;&#x5B8C;&#x6574;&#x6587;&#x4EF6;&#x540D;&#xFF01;&#x800C;&#x4E0D;&#x662F;&#x4EC5;&#x5217;&#x51FA;&#x6700;&#x540E;&#x7684;&#x540D;&#x5B57;&#x800C;&#x5DF2;&#x3002;
+-t  &#xFF1A;&#x5217;&#x51FA;&#x8BE5;&#x78C1;&#x76D8;&#x8BBE;&#x5907;&#x7684;&#x8BE6;&#x7EC6;&#x6570;&#x636E;&#xFF0C;&#x5305;&#x62EC;&#x78C1;&#x76D8;&#x4F2B;&#x5217;&#x673A;&#x5236;&#x3001;&#x9884;&#x8BFB;&#x5199;&#x7684;&#x6570;&#x636E;&#x91CF;&#x5927;&#x5C0F;&#x7B49;
+</code></pre>
+<hr>
+<h1 id="blkid"><a name="blkid" class="anchor-navigation-ex-anchor" href="#blkid"><i class="fa fa-link" aria-hidden="true"></i></a>blkid</h1>
+<h2 id="&#x4F5C;&#x7528;_4"><a name="&#x4F5C;&#x7528;_4" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code>blkid - locate/print block device attributes
+</code></pre><p>&#x6253;&#x5370;&#x5757;&#x8BBE;&#x5907;&#x5C5E;&#x6027;</p>
+<h2 id="&#x793A;&#x4F8B;_4"><a name="&#x793A;&#x4F8B;_4" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_4"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<p>&#x67E5;&#x770B;&#x8BBE;&#x5907;&#x7684;<code>uuid</code>&#x4EE5;&#x53CA;<code>type</code>&#x7B49;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># blkid </span>
+/dev/mapper/centos-root: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;a6273829-ea65-4d66-8975-e57bda2c45a3&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;xfs&quot;</span> 
+/dev/sda2: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;eJxxnr-dqUB-oZlr-j6Hr-MUWl-oJs6-JUBALe&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;LVM2_member&quot;</span> 
+/dev/sda1: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;20c37421-fe58-4a0e-98ef-10acf395ffbf&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;xfs&quot;</span> 
+/dev/mapper/centos-swap: <span class="token assign-left variable">UUID</span><span class="token operator">=</span><span class="token string">&quot;5bc2d0fa-6abd-4e60-a7ea-743ef62dff65&quot;</span> <span class="token assign-left variable">TYPE</span><span class="token operator">=</span><span class="token string">&quot;swap&quot;</span>
+</code></pre>
+<hr>
+<h1 id="parted"><a name="parted" class="anchor-navigation-ex-anchor" href="#parted"><i class="fa fa-link" aria-hidden="true"></i></a>parted</h1>
+<h2 id="&#x4F5C;&#x7528;_5"><a name="&#x4F5C;&#x7528;_5" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h2>
+<pre class="language-"><code>parted - a partition manipulation program
+</code></pre><p>&#x7528;&#x4E8E;&#x64CD;&#x4F5C;&#x5206;&#x533A;&#x7684;&#x7A0B;&#x5E8F;</p>
+<h2 id="&#x793A;&#x4F8B;_5"><a name="&#x793A;&#x4F8B;_5" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_5"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h2>
+<p>&#x901A;&#x8FC7;<code>parted</code>&#x67E5;&#x770B;&#x5206;&#x533A;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x770B;&#x9664;&#x5206;&#x533A;&#x683C;&#x5F0F;&#x662F;<code>msdos&#xFF08;MBR&#xFF09;</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># parted /dev/sda print</span>
+Model: QEMU QEMU HARDDISK <span class="token punctuation">(</span>scsi<span class="token punctuation">)</span>
+Disk /dev/sda: <span class="token number">85</span>.9GB
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: 512B/512B
+Partition Table: msdos
+Disk Flags: 
+
+Number  Start   End     Size    Type     File system  Flags
+ <span class="token number">1</span>      1049kB  1075MB  1074MB  primary  xfs          boot
+ <span class="token number">2</span>      1075MB  <span class="token number">21</span>.5GB  <span class="token number">20</span>.4GB  primary               lvm
+ <span class="token number">3</span>      <span class="token number">21</span>.5GB  <span class="token number">23</span>.6GB  2147MB  primary               lvm
+</code></pre>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="LDAP统一认证服务.html" class="navigation navigation-prev " aria-label="Previous page: LDAP统一认证服务">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="LVM逻辑卷的创建与扩容.html" class="navigation navigation-next " aria-label="Next page: LVM逻辑卷的创建与扩容">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"磁盘操作命令小结","level":"1.2.6","depth":2,"next":{"title":"LVM逻辑卷的创建与扩容","level":"1.2.7","depth":2,"path":"linux/LVM逻辑卷的创建与扩容.md","ref":"linux/LVM逻辑卷的创建与扩容.md","articles":[]},"previous":{"title":"LDAP统一认证服务","level":"1.2.5","depth":2,"path":"linux/LDAP统一认证服务.md","ref":"linux/LDAP统一认证服务.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"images/golang.png","style":"background: none; max-height: 120px; min-height: 120px"},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"linux/磁盘操作命令小结.md","mtime":"2021-01-07T03:32:06.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T14:18:19.654Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

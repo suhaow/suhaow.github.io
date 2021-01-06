@@ -1,0 +1,740 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LDAP统一认证服务 · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="磁盘操作命令小结.html" />
+    
+    
+    <link rel="prev" href="SSH信任关系.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="NFS配置.html">
+            
+                <a href="NFS配置.html">
+            
+                    
+                    NFS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="vsftpd.html">
+            
+                <a href="vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="supervisor.html">
+            
+                <a href="supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="SSH信任关系.html">
+            
+                <a href="SSH信任关系.html">
+            
+                    
+                    SSH信任关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.5" data-path="LDAP统一认证服务.html">
+            
+                <a href="LDAP统一认证服务.html">
+            
+                    
+                    LDAP统一认证服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="磁盘操作命令小结.html">
+            
+                <a href="磁盘操作命令小结.html">
+            
+                    
+                    磁盘操作命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="LVM逻辑卷的创建与扩容.html">
+            
+                <a href="LVM逻辑卷的创建与扩容.html">
+            
+                    
+                    LVM逻辑卷的创建与扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ansible/安装介绍.html">
+            
+                <a href="../ansible/安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ansible/常用模块.html">
+            
+                <a href="../ansible/常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ansible/Playbook.html">
+            
+                <a href="../ansible/Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ansible/roles角色.html">
+            
+                <a href="../ansible/roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    杂七杂八
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../other/GitBook搭建发布.html">
+            
+                <a href="../other/GitBook搭建发布.html">
+            
+                    
+                    GitBook搭建发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LDAP统一认证服务</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x7684;"><b></b>&#x76EE;&#x7684;</a></li><li><span class="title-icon "></span><a href="#&#x73AF;&#x5883;&#x4FE1;&#x606F;"><b></b>&#x73AF;&#x5883;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><b></b>&#x540D;&#x8BCD;&#x89E3;&#x91CA;</a></li><ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;"><b></b>&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;</a></li><li><span class="title-icon "></span><a href="#&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;"><b></b>&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;</a></li></ul><li><span class="title-icon "></span><a href="#&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;"><b></b>&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;"><b></b>&#x542F;&#x52A8;</a></li><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x6210;&#x5BC6;&#x94A5;"><b></b>&#x751F;&#x6210;&#x5BC6;&#x94A5;</a></li><li><span class="title-icon "></span><a href="#&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;"><b></b>&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x542F;&#x52A8;-ldap-&#x670D;&#x52A1;"><b></b>&#x542F;&#x52A8; LDAP &#x670D;&#x52A1;</a></li></ul><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b></b>&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;"><b></b>&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;"><b></b>&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;"><b></b>&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;"><b></b>&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;"><b></b>&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;</a></li><ul><li><span class="title-icon "></span><a href="#phpldapadmin&#x5B89;&#x88C5;"><b></b>PHPLDAPAdmin&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#ldap-admin&#x5B89;&#x88C5;"><b></b>LDAP Admin&#x5B89;&#x88C5;</a></li></ul><li><span class="title-icon "></span><a href="#&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;"><b></b>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;</a></li><ul><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x6DFB;&#x52A0;&#x7528;&#x6237;"><b></b>&#x6DFB;&#x52A0;&#x7528;&#x6237;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;sudo"><b></b>&#x914D;&#x7F6E;sudo</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></div><a href="#&#x76EE;&#x7684;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x76EE;&#x7684;"><a name="&#x76EE;&#x7684;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x7684;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76EE;&#x7684;</h1>
+<p>&#x901A;&#x8FC7;&#x4EE5;&#x4E0B;&#x6B65;&#x9AA4;&#x6700;&#x7EC8;&#x53EF;&#x4F7F;&#x7528;<code>ldap server</code>&#x4E2D;&#x7684;&#x7528;&#x6237;&#x767B;&#x5F55;&#x4E00;&#x53F0;<code>ldap client</code>&#xFF0C;&#x5E76;&#x5141;&#x8BB8;&#x6709;<code>sudo</code>&#x6743;&#x9650;&#x3002;&#x5E73;&#x5E38;&#x516C;&#x53F8;&#x4E2D;&#x6240;&#x7528;&#x7684;&#x57DF;&#x8D26;&#x53F7;&#x4EE5;&#x53CA;&#x670D;&#x52A1;&#x5668;&#x8D26;&#x53F7;&#x4E5F;&#x8BB8;&#x5C31;&#x662F;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x5E94;&#x8BE5;&#x6CA1;&#x6709;&#x8FD9;&#x4E48;&#x7B80;&#x964B;&#xFF0C;&#x53EA;&#x662F;&#x501F;&#x673A;&#x4E86;&#x89E3;&#x4E00;&#x6CE2;<code>ldap</code></p>
+<hr>
+<h1 id="&#x73AF;&#x5883;&#x4FE1;&#x606F;"><a name="&#x73AF;&#x5883;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x73AF;&#x5883;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x73AF;&#x5883;&#x4FE1;&#x606F;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># hostnamectl </span>
+   Static hostname: suhw
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: c9006a74a3674913a1e2bf3f582ec2a3
+           Boot ID: 1421443538404e6aa9c26cebe889446c
+    Virtualization: kvm
+  Operating System: CentOS Linux <span class="token number">7</span> <span class="token punctuation">(</span>Core<span class="token punctuation">)</span>
+       CPE OS Name: cpe:/o:centos:centos:7
+            Kernel: Linux <span class="token number">3.10</span>.0-957.el7.x86_64
+      Architecture: x86-64
+</code></pre>
+<hr>
+<h1 id="&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><a name="&#x540D;&#x8BCD;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x540D;&#x8BCD;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540D;&#x8BCD;&#x89E3;&#x91CA;</h1>
+<p><code>LDAP(Light Directory Access Portocol)</code>&#x8F7B;&#x91CF;&#x7EA7;&#x76EE;&#x5F55;&#x8BBF;&#x95EE;&#x534F;&#x8BAE;&#x3002;&#x73B0;&#x5728;&#x8BB8;&#x591A;&#x4EA7;&#x54C1;&#x90FD;&#x52A0;&#x5165;&#x4E86;&#x5BF9;<code>LDAP</code>&#x7684;&#x652F;&#x6301;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x7684;&#x914D;&#x7F6E;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x505A;&#x8BA4;&#x8BC1;&#x670D;&#x52A1;&#x3002;&#x7528;&#x6237;&#x53EA;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;&#x5BC6;&#x7801;&#x767B;&#x5F55;&#x4F17;&#x591A;&#x4E2A;&#x652F;&#x6301;<code>LDAP</code>&#x534F;&#x8BAE;&#x7684;&#x5E94;&#x7528;&#xFF0C;&#x7531;&#x5E94;&#x7528;&#x81EA;&#x5DF1;&#x53BB;<code>LDAP Server</code>&#x53BB;&#x8BA4;&#x8BC1;&#x7528;&#x6237;&#x4FE1;&#x606F;&#xFF0C;&#x4E0D;&#x4EC5;&#x505A;&#x5230;&#x4E86;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x7684;&#x7EDF;&#x4E00;&#x7BA1;&#x7406;&#xFF0C;&#x5BF9;&#x4E8E;&#x5E94;&#x7528;&#x8BA4;&#x8BC1;&#x4E5F;&#x5341;&#x5206;&#x65B9;&#x4FBF;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#x4E86;&#x89E3;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x6982;&#x5FF5;</p>
+<h2 id="&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;"><a name="&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x76EE;&#x5F55;&#x6811;&#x6982;&#x5FF5;</h2>
+<ol>
+<li>&#x76EE;&#x5F55;&#x6811;&#xFF1A;&#x5728;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x670D;&#x52A1;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;&#x6574;&#x4E2A;&#x76EE;&#x5F55;&#x4FE1;&#x606F;&#x96C6;&#x53EF;&#x4EE5;&#x8868;&#x793A;&#x4E3A;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4FE1;&#x606F;&#x6811;&#xFF0C;&#x6811;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x3002;</li>
+<li>&#x6761;&#x76EE;&#xFF1A;&#x6BCF;&#x4E2A;&#x6761;&#x76EE;&#x5C31;&#x662F;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#xFF0C;&#x6BCF;&#x4E2A;&#x6761;&#x76EE;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x552F;&#x4E00;&#x53EF;&#x533A;&#x522B;&#x7684;&#x540D;&#x79F0;&#xFF08;DN&#xFF09;&#x3002;</li>
+<li>&#x5BF9;&#x8C61;&#x7C7B;&#xFF1A;&#x4E0E;&#x67D0;&#x4E2A;&#x5B9E;&#x4F53;&#x7C7B;&#x578B;&#x5BF9;&#x5E94;&#x7684;&#x4E00;&#x7EC4;&#x5C5E;&#x6027;&#xFF0C;&#x5BF9;&#x8C61;&#x7C7B;&#x662F;&#x53EF;&#x4EE5;&#x7EE7;&#x627F;&#x7684;&#xFF0C;&#x8FD9;&#x6837;&#x7236;&#x7C7B;&#x7684;&#x5FC5;&#x987B;&#x5C5E;&#x6027;&#x4E5F;&#x4F1A;&#x88AB;&#x7EE7;&#x627F;&#x4E0B;&#x6765;&#x3002;</li>
+<li>&#x5C5E;&#x6027;&#xFF1A;&#x63CF;&#x8FF0;&#x6761;&#x76EE;&#x7684;&#x67D0;&#x4E2A;&#x65B9;&#x9762;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7531;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x7C7B;&#x578B;&#x548C;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x5C5E;&#x6027;&#x503C;&#x7EC4;&#x6210;&#xFF0C;&#x5C5E;&#x6027;&#x6709;&#x5FC5;&#x987B;&#x5C5E;&#x6027;&#x548C;&#x975E;&#x5FC5;&#x987B;&#x5C5E;&#x6027;&#x3002;</li>
+</ol>
+<h2 id="&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;"><a name="&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;" class="anchor-navigation-ex-anchor" href="#&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5173;&#x952E;&#x5B57;&#x89E3;&#x91CA;</h2>
+<table>
+<thead>
+<tr>
+<th><strong>&#x5173;&#x952E;&#x5B57;</strong></th>
+<th><strong>&#x82F1;&#x6587;&#x5168;&#x79F0;</strong></th>
+<th><strong>&#x542B;&#x4E49;</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>dc</strong></td>
+<td>Domain Component</td>
+<td>&#x57DF;&#x540D;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x662F;&#x5C06;&#x5B8C;&#x6574;&#x7684;&#x57DF;&#x540D;&#x5206;&#x6210;&#x51E0;&#x90E8;&#x5206;&#xFF0C;&#x5982;&#x57DF;&#x540D;&#x4E3A;example.com&#x53D8;&#x6210;dc=example,dc=com&#xFF08;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x6240;&#x5C5E;&#x4F4D;&#x7F6E;&#xFF09;</td>
+</tr>
+<tr>
+<td><strong>ou</strong></td>
+<td>Organization Unit</td>
+<td>&#x7EC4;&#x7EC7;&#x5355;&#x4F4D;&#xFF0C;&#x7EC4;&#x7EC7;&#x5355;&#x4F4D;&#x53EF;&#x4EE5;&#x5305;&#x542B;&#x5176;&#x4ED6;&#x5404;&#x79CD;&#x5BF9;&#x8C61;&#xFF08;&#x5305;&#x62EC;&#x5176;&#x4ED6;&#x7EC4;&#x7EC7;&#x5355;&#x5143;&#xFF09;&#xFF0C;&#x5982;&#x201C;oa&#x7EC4;&#x201D;&#xFF08;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x6240;&#x5C5E;&#x7EC4;&#x7EC7;&#xFF09;</td>
+</tr>
+<tr>
+<td><strong>cn</strong></td>
+<td>Common Name</td>
+<td>&#x516C;&#x5171;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x201C;Thomas Johansson&#x201D;&#xFF08;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x540D;&#x79F0;&#xFF09;</td>
+</tr>
+<tr>
+<td><strong>dn</strong></td>
+<td>Distinguished Name</td>
+<td>&#x201C;uid=songtao.xu,ou=oa&#x7EC4;,dc=example,dc=com&#x201D;&#xFF0C;&#x4E00;&#x6761;&#x8BB0;&#x5F55;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x552F;&#x4E00;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;"><a name="&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x670D;&#x52A1;&#x7AEF;&#x5B89;&#x88C5;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># yum -y install openldap-servers openldap-clients</span>
+</code></pre>
+<hr>
+<h1 id="&#x542F;&#x52A8;"><a name="&#x542F;&#x52A8;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8;</h1>
+<h2 id="&#x751F;&#x6210;&#x5BC6;&#x94A5;"><a name="&#x751F;&#x6210;&#x5BC6;&#x94A5;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x5BC6;&#x94A5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x5BC6;&#x94A5;</h2>
+<p>&#x8BB0;&#x4F4F;&#x8F93;&#x51FA;&#x7ED3;&#x679C;&#xFF0C;&#x540E;&#x7EED;&#x4F1A;&#x5C06;&#x52A0;&#x5BC6;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x8BBE;&#x7F6E;&#x4E3A;&#x521D;&#x59CB;&#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># slappasswd -s 123456</span>
+<span class="token punctuation">{</span>SSHA<span class="token punctuation">}</span>naG35hsGaMHojVoOoZQvjinkza4XUSBr
+</code></pre>
+<h2 id="&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;"><a name="&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FEE;&#x6539;&#x6240;&#x5C5E;&#x7528;&#x6237;&#x4E0E;&#x7EC4;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># chown ldap:ldap /var/lib/ldap/*</span>
+</code></pre>
+<h2 id="&#x542F;&#x52A8;-ldap-&#x670D;&#x52A1;"><a name="&#x542F;&#x52A8;-ldap-&#x670D;&#x52A1;" class="anchor-navigation-ex-anchor" href="#&#x542F;&#x52A8;-ldap-&#x670D;&#x52A1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x542F;&#x52A8; LDAP &#x670D;&#x52A1;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># systemctl start slapd</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># systemctl enable slapd</span>
+</code></pre>
+<hr>
+<h1 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h1>
+<h2 id="&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;"><a name="&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x57FA;&#x7840;&#x6A21;&#x5757;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif </span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif</span>
+</code></pre>
+<p>&#x5BFC;&#x5165;&#x751F;&#x6548;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/cosine.ldif </span>
+SASL/EXTERNAL authentication started
+SASL username: <span class="token assign-left variable">gidNumber</span><span class="token operator">=</span><span class="token number">0</span>+uidNumber<span class="token operator">=</span><span class="token number">0</span>,cn<span class="token operator">=</span>peercred,cn<span class="token operator">=</span>external,cn<span class="token operator">=</span>auth
+SASL SSF: <span class="token number">0</span>
+adding new entry <span class="token string">&quot;cn=cosine,cn=schema,cn=config&quot;</span>
+
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/nis.ldif</span>
+SASL/EXTERNAL authentication started
+SASL username: <span class="token assign-left variable">gidNumber</span><span class="token operator">=</span><span class="token number">0</span>+uidNumber<span class="token operator">=</span><span class="token number">0</span>,cn<span class="token operator">=</span>peercred,cn<span class="token operator">=</span>external,cn<span class="token operator">=</span>auth
+SASL SSF: <span class="token number">0</span>
+adding new entry <span class="token string">&quot;cn=nis,cn=schema,cn=config&quot;</span>
+
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/inetorgperson.ldif</span>
+SASL/EXTERNAL authentication started
+SASL username: <span class="token assign-left variable">gidNumber</span><span class="token operator">=</span><span class="token number">0</span>+uidNumber<span class="token operator">=</span><span class="token number">0</span>,cn<span class="token operator">=</span>peercred,cn<span class="token operator">=</span>external,cn<span class="token operator">=</span>auth
+SASL SSF: <span class="token number">0</span>
+adding new entry <span class="token string">&quot;cn=inetorgperson,cn=schema,cn=config&quot;</span>
+</code></pre>
+<h2 id="&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;"><a name="&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;&#x57DF;&#x4FE1;&#x606F;</h2>
+<p>&#x521B;&#x5EFA;<code>/etc/openldap/schema/changes.ldif</code>&#x6587;&#x4EF6;&#xFF0C;&#x5C06;&#x8981;&#x66FF;&#x6362;&#x7684;&#x90E8;&#x5206;&#x66F4;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<pre class="language-"><code># &#x4FEE;&#x6539;&#x57DF;&#x540D;
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcSuffix
+# &#x6CE8;&#x610F;&#x4FEE;&#x6539;
+olcSuffix: dc=suhw,dc=com
+
+# &#x4FEE;&#x6539;&#x7BA1;&#x7406;&#x5458;&#x7528;&#x6237;
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootDN
+# &#x6CE8;&#x610F;&#x4FEE;&#x6539;
+olcRootDN: cn=admin,dc=suhw,dc=com
+
+# &#x4FEE;&#x6539;&#x7BA1;&#x7406;&#x5458;&#x5BC6;&#x7801;
+dn: olcDatabase={2}hdb,cn=config
+changetype: modify
+replace: olcRootPW
+# &#x66FF;&#x6362;&#x4E3A; slappasswd &#x751F;&#x6210;&#x540E;&#x7684;&#x7ED3;&#x679C;
+olcRootPW: {SSHA}naG35hsGaMHojVoOoZQvjinkza4XUSBr
+
+# &#x4FEE;&#x6539;&#x8BBF;&#x95EE;&#x6743;&#x9650;
+dn: olcDatabase={1}monitor,cn=config
+changetype: modify
+replace: olcAccess
+olcAccess: {0}to * by dn.base=&quot;gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth&quot; read by 
+#&#x4FEE;&#x6539;dn.base
+dn.base=&quot;cn=admin,dc=suhw,dc=com&quot; read by * none
+</code></pre><p>&#x5BFC;&#x5165;&#x914D;&#x7F6E;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapmodify -Y EXTERNAL -H ldapi:/// -f /etc/openldap/schema/changes.ldif</span>
+SASL/EXTERNAL authentication started
+SASL username: <span class="token assign-left variable">gidNumber</span><span class="token operator">=</span><span class="token number">0</span>+uidNumber<span class="token operator">=</span><span class="token number">0</span>,cn<span class="token operator">=</span>peercred,cn<span class="token operator">=</span>external,cn<span class="token operator">=</span>auth
+SASL SSF: <span class="token number">0</span>
+modifying entry <span class="token string">&quot;olcDatabase={2}hdb,cn=config&quot;</span>
+
+modifying entry <span class="token string">&quot;olcDatabase={2}hdb,cn=config&quot;</span>
+
+modifying entry <span class="token string">&quot;olcDatabase={2}hdb,cn=config&quot;</span>
+
+modifying entry <span class="token string">&quot;olcDatabase={1}monitor,cn=config&quot;</span>
+</code></pre>
+<h2 id="&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;"><a name="&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;" class="anchor-navigation-ex-anchor" href="#&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x521B;&#x5EFA;&#x57DF;&#x548C;&#x7EC4;&#x7EC7;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vi /etc/openldap/schema/basedomain.ldif</span>
+</code></pre>
+<p><code>dn</code>,<code>dc</code>&#x7684;&#x5730;&#x65B9;&#x4FEE;&#x6539;&#x4E3A;&#x81EA;&#x5DF1;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;</p>
+<pre class="language-"><code>dn: dc=suhw,dc=com
+dc: suhw
+objectClass: top
+objectClass: domain
+
+dn: ou=People,dc=suhw,dc=com
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group,dc=suhw,dc=com
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+</code></pre><p>&#x5BFC;&#x5165;&#x914D;&#x7F6E;&#xFF0C;&#x56DE;&#x8F66;&#x540E;&#x8F93;&#x5165;&#x4E4B;&#x524D;&#x521B;&#x5EFA;&#x7528;&#x6237;&#x672A;&#x52A0;&#x5BC6;&#x4E4B;&#x524D;&#x7684;&#x5BC6;&#x7801;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapadd -x -D cn=admin,dc=suhw,dc=com -W -f /etc/openldap/base.ldif</span>
+Enter LDAP Password: 
+adding new entry <span class="token string">&quot;dc=suhw,dc=com&quot;</span>
+
+adding new entry <span class="token string">&quot;ou=People,dc=suhw,dc=com&quot;</span>
+
+adding new entry <span class="token string">&quot;ou=Group,dc=suhw,dc=com&quot;</span>
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;"><a name="&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x7528;&#x6237;&#x5217;&#x8868;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># ldapsearch -x -b &quot;ou=People,dc=suhw,dc=com&quot; | grep dn</span>
+</code></pre>
+<hr>
+<h1 id="&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;"><a name="&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;&#x56FE;&#x5F62;&#x5316;&#x754C;&#x9762;</h1>
+<p>&#x4E86;&#x89E3;&#x5230;&#x7684;&#x4E24;&#x79CD;&#x56FE;&#x50CF;&#x5316;&#x754C;&#x9762;&#xFF0C;&#x4E00;&#x79CD;&#x662F;<code>LDAP Admin</code>&#xFF0C;&#x53E6;&#x5916;&#x4E00;&#x79CD;&#x662F;<code>PHPLDAPAdmin</code>&#x3002;&#x901A;&#x8FC7;&#x8FD9;&#x4E24;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x53EF;&#x4EE5;&#x65B9;&#x4FBF;&#x7684;&#x8FDB;&#x884C;&#x7528;&#x6237;&#x7684;&#x589E;&#x5220;&#x67E5;&#x6539;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="phpldapadmin&#x5B89;&#x88C5;"><a name="phpldapadmin&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#phpldapadmin&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>PHPLDAPAdmin&#x5B89;&#x88C5;</h2>
+<p>&#x76F4;&#x63A5;&#x91C7;&#x7528;<code>docker</code>&#x5B89;&#x88C5;&#x65B9;&#x4FBF;&#x3002;&#x9996;&#x5148;&#x8BB0;&#x5F97;&#x653E;&#x5F00;<code>ldapserver</code>&#x7684;389&#x7AEF;&#x53E3;&#x6216;&#x5173;&#x95ED;&#x9632;&#x706B;&#x5899;&#xFF0C;&#x5426;&#x5219;&#x767B;&#x5F55;&#x4F1A;&#x51FA;&#x9519;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw openldap<span class="token punctuation">]</span><span class="token comment"># firewall-cmd --zone=public --add-port=389/tcp --permanent</span>
+success
+<span class="token punctuation">[</span>root@suhw openldap<span class="token punctuation">]</span><span class="token comment"># systemctl restart firewalld</span>
+</code></pre>
+<p>&#x6267;&#x884C;<code>docker</code>&#x5B89;&#x88C5;&#x547D;&#x4EE4;</p>
+<pre class="language-"><code class="lang-bash">docker run -d --privileged -p <span class="token number">10004</span>:80 --name myphpldapadmin <span class="token punctuation">\</span>
+  --env <span class="token assign-left variable">PHPLDAPADMIN_HTTPS</span><span class="token operator">=</span>false --env <span class="token assign-left variable">PHPLDAPADMIN_LDAP_HOSTS</span><span class="token operator">=</span><span class="token number">10.91</span>.156.198  <span class="token punctuation">\</span>
+  --detach osixia/phpldapadmin
+</code></pre>
+<p>&#x914D;&#x7F6E;&#x7684;<code>Ldap</code>&#x5730;&#x5740;&#xFF1A;<code>--env PHPLDAPADMIN_LDAP_HOSTS=10.91.156.198</code></p>
+<p>&#x914D;&#x7F6E;&#x4E0D;&#x5F00;&#x542F;<code>HTTPS</code>&#xFF1A;<code>--env PHPLDAPADMIN_HTTPS=false</code>&#xFF08;&#x9ED8;&#x8BA4;&#x662F;true&#xFF09;</p>
+<p>&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x4EE5;&#x540E;&#x8BBF;&#x95EE;<code>http://host:10004</code>&#x5373;&#x53EF;&#x3002;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116194900.png" data-lightbox="fe3518c4-cc4e-4e80-b575-b258c3d399c2" data-title="image-20201112204311658" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116194900.png" alt="image-20201112204311658"></a></p>
+<hr>
+<h2 id="ldap-admin&#x5B89;&#x88C5;"><a name="ldap-admin&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#ldap-admin&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>LDAP Admin&#x5B89;&#x88C5;</h2>
+<p><code>Ldap Admin</code>&#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;<code>LDAP</code>&#x76EE;&#x5F55;&#x7BA1;&#x7406;&#x7684;&#x514D;&#x8D39;<code>Windows LDAP</code>&#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x7BA1;&#x7406;&#x5DE5;&#x5177;&#x3002;&#x6B64;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5141;&#x8BB8;&#x60A8;&#x5728;<code>LDAP</code>&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x6D4F;&#x89C8;&#xFF0C;&#x641C;&#x7D22;&#xFF0C;&#x4FEE;&#x6539;&#xFF0C;&#x521B;&#x5EFA;&#x548C;&#x5220;&#x9664;&#x5BF9;&#x8C61;&#x3002;&#x5B83;&#x8FD8;&#x652F;&#x6301;&#x66F4;&#x590D;&#x6742;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x4F8B;&#x5982;&#x76EE;&#x5F55;&#x590D;&#x5236;&#x548C;&#x5728;&#x8FDC;&#x7A0B;&#x670D;&#x52A1;&#x5668;&#x4E4B;&#x95F4;&#x79FB;&#x52A8;&#xFF0C;&#x5E76;&#x6269;&#x5C55;&#x5E38;&#x7528;&#x7F16;&#x8F91;&#x529F;&#x80FD;&#x4EE5;&#x652F;&#x6301;&#x7279;&#x5B9A;&#x5BF9;&#x8C61;&#x7C7B;&#x578B;&#xFF08;&#x4F8B;&#x5982;&#x7EC4;&#x548C;&#x5E10;&#x6237;&#xFF09;&#x3002;</p>
+<p>&#x4E0B;&#x8F7D;&#x5730;&#x5740;&#xFF1A;<a href="http://www.ldapadmin.org/" target="_blank">http://www.ldapadmin.org/</a></p>
+<p>&#x5B89;&#x88C5;&#x6210;&#x529F;&#x540E;&#x767B;&#x5F55;&#x754C;&#x9762;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116195650.png" data-lightbox="520ad527-5f08-4b3e-9e69-f5ca24a45fc1" data-title="image-20201116195648930" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116195650.png" alt="image-20201116195648930"></a></p>
+<hr>
+<h1 id="&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;"><a name="&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5BA2;&#x6237;&#x7AEF;&#x914D;&#x7F6E;</h1>
+<h2 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h2>
+<p>&#x5728;&#x4EFB;&#x610F;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x4E0A;&#x9996;&#x5148;&#x5B89;&#x88C5;<code>nss-pam-ldapd</code></p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@node ~<span class="token punctuation">]</span><span class="token comment"># yum install openldap-client nss-pam-ldapd -y</span>
+</code></pre>
+<p>&#x4F7F;&#x7528;<code>authconfig</code>&#x8FDB;&#x884C;<code>ldap</code>&#x8BA4;&#x8BC1;&#x7684;&#x76F8;&#x5173;&#x8BBE;&#x7F6E;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@node ~<span class="token punctuation">]</span><span class="token comment"># authconfig --enableldap --enableldapauth --enablemkhomedir --enableforcelegacy --disablesssd --disablesssdauth --disableldaptls --enablelocauthorize --ldapserver=10.91.156.205 --ldapbasedn=&quot;dc=suhw,dc=com&quot; --enableshadow --update</span>
+</code></pre>
+<p><code>--ldapserver</code>&#x586B;&#x5199;&#x5BF9;&#x5E94;<code>ldapserver</code>&#x7684;&#x5730;&#x5740;&#xFF0C;<code>basedn</code>&#x586B;&#x5199;&#x57FA;&#x7840;&#x7684;&#x57DF;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5047;&#x8BBE;&#x6211;&#x5728;10.91.156.209&#x4E0A;&#x8FDB;&#x884C;&#x5B8C;&#x6210;&#x4E0A;&#x8FF0;&#x64CD;&#x4F5C;&#xFF0C;&#x90A3;&#x4EE5;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>test01@10.91.156.209</code>&#x8FDB;&#x884C;&#x767B;&#x5F55;&#xFF0C;209&#x673A;&#x5668;&#x4F1A;&#x62FF;&#x7528;&#x6237;&#x4FE1;&#x606F;&#x53BB;&#x627E;<code>ldapserver</code>&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x3002;</p>
+<h2 id="&#x6DFB;&#x52A0;&#x7528;&#x6237;"><a name="&#x6DFB;&#x52A0;&#x7528;&#x6237;" class="anchor-navigation-ex-anchor" href="#&#x6DFB;&#x52A0;&#x7528;&#x6237;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6DFB;&#x52A0;&#x7528;&#x6237;</h2>
+<ol>
+<li>&#x65B0;&#x5EFA;<code>sudoers</code>&#x7EC4;&#x7EC7;</li>
+</ol>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116202923.png" data-lightbox="3206e24d-5ee7-4c58-9f43-526cf2c6afa4" data-title="image-20201116202922208" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116202923.png" alt="image-20201116202922208"></a></p>
+<ol>
+<li><p>&#x65B0;&#x5EFA; cloud &#x7EC4;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116203007.png" data-lightbox="0b8fa9dc-33db-42c6-afa4-5949b6675754" data-title="image-20201116203004949" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116203007.png" alt="image-20201116203004949"></a></p>
+</li>
+</ol>
+<p>&#x67E5;&#x770B; group &#x5C5E;&#x6027;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116202548.png" data-lightbox="b6fe6e75-0378-4e00-8245-1b5d8a8c9969" data-title="image-20201116202546170" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116202548.png" alt="image-20201116202546170"></a></p>
+<p>&#x5728;<code>LDAP server</code>&#x4E0A;&#x6DFB;&#x52A0;id&#x4E3A;7958&#x7684;group&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@server ~<span class="token punctuation">]</span><span class="token comment"># groupadd -g 7958 cloud</span>
+
+<span class="token punctuation">[</span>root@server ~<span class="token punctuation">]</span><span class="token comment"># tail /etc/group -n 1</span>
+cloud:x:7958:
+</code></pre>
+<ol>
+<li>&#x65B0;&#x5EFA;test&#x7528;&#x6237;&#x5E76;&#x653E;&#x7F6E;&#x5728;cloud&#x7EC4;&#x4E0B;</li>
+</ol>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116203613.png" data-lightbox="0cfbd626-dce1-4689-97b8-231032764367" data-title="image-20201116203610946" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116203613.png" alt="image-20201116203610946"></a></p>
+<p>&#x8BBE;&#x7F6E;user&#x76F8;&#x5173;&#x5C5E;&#x6027;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116203950.png" data-lightbox="acf4f6b1-de31-422d-a592-b4a0e08eac07" data-title="image-20201116203948248" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116203950.png" alt="image-20201116203948248"></a></p>
+<p>&#x53F3;&#x952E;&#x7528;&#x6237;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;<code>123456</code></p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116204010.png" data-lightbox="3ae71067-c7e2-4d3b-a8a7-0dd6a752d1f4" data-title="image-20201116204008558" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116204010.png" alt="image-20201116204008558"></a></p>
+<p>&#x4FDD;&#x5B58;&#x540E;&#x5C06;<code>test01</code>&#x7528;&#x6237;&#x632A;&#x81F3;<code>cloud</code>&#x7EC4;&#x4E0B;&#xFF0C;&#x5E76;&#x4FEE;&#x6539;&#x7528;&#x6237;<code>gid</code>&#x4E3A;&#x4E4B;&#x524D;&#x7684;7958</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116204508.png" data-lightbox="4625d420-0f48-4cb6-b14a-2619b034d497" data-title="image-20201116204507033" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116204508.png" alt="image-20201116204507033"></a></p>
+<p>&#x6B64;&#x65F6;&#x901A;&#x8FC7;<code>test01@10.91.156.205</code>&#x8BBF;&#x95EE;<code>ldap client</code>&#xFF0C;&#x5373;&#x53EF;&#x8BBF;&#x95EE;&#x6210;&#x529F;&#xFF0C;&#x5E76;&#x4F1A;&#x5728;<code>ldap client</code>&#x4E2D;&#x65B0;&#x5EFA;<code>/home/test01</code>&#x4F5C;&#x4E3A;&#x5BB6;&#x76EE;&#x5F55;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20201116204649.png" data-lightbox="2757ed65-e839-4726-89b7-84248d146583" data-title="image-20201116204647455" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20201116204649.png" alt="image-20201116204647455"></a></p>
+<p>&#x6CE8;&#xFF1A;&#x6DFB;&#x52A0;&#x7528;&#x6237;&#x548C;&#x7EC4;&#x65F6;<code>id</code>&#x6CE8;&#x610F;&#x522B;&#x548C;<code>ldapserver</code>&#x4E2D;&#x7684;&#x91CD;&#x590D;&#x3002;</p>
+<h2 id="&#x914D;&#x7F6E;sudo"><a name="&#x914D;&#x7F6E;sudo" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;sudo"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;<code>sudo</code></h2>
+<p>&#x8981;&#x5411;&#x7ED9;<code>test01</code>&#x7528;&#x6237;<code>sudo</code>&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7;<code>visudo</code>&#x7F16;&#x8F91;<code>/etc/sudoers</code>&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF0C;&#x5C06;<code>cloud</code>&#x7EC4;&#x52A0;&#x7F6E;&#x5BF9;&#x5E94;&#x4F4D;&#x7F6E;&#x5373;&#x53EF;</p>
+<pre class="language-"><code>    106 ## Allows people in group wheel to run all commands
+    107 %wheel  ALL=(ALL)       ALL
+    108 %cloud  ALL=(ALL)       ALL
+</code></pre><p>&#x6B64;&#x65F6;&#x518D;&#x53BB;&#x91CD;&#x65B0;&#x8FDE;&#x63A5;&#x5C31;&#x53EF;&#x62E5;&#x6709;<code>sudo</code>&#x6743;&#x9650;&#x3002;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;&#x81EA;&#x884C;&#x641C;&#x7D22;</p>
+<hr>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<p><a href="https://www.cnblogs.com/wilburxu/p/9174353.html" target="_blank">https://www.cnblogs.com/wilburxu/p/9174353.html</a></p>
+<p><a href="https://blog.mylitboy.com/article/operation/docker-install-openldap.html" target="_blank">https://blog.mylitboy.com/article/operation/docker-install-openldap.html</a></p>
+<p><a href="https://www.cnblogs.com/xiaomifeng0510/p/9564688.html" target="_blank">https://www.cnblogs.com/xiaomifeng0510/p/9564688.html</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1563031" target="_blank">https://cloud.tencent.com/developer/article/1563031</a></p>
+<p><a href="https://www.runoob.com/linux/linux-user-manage.html" target="_blank">https://www.runoob.com/linux/linux-user-manage.html</a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="SSH信任关系.html" class="navigation navigation-prev " aria-label="Previous page: SSH信任关系">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="磁盘操作命令小结.html" class="navigation navigation-next " aria-label="Next page: 磁盘操作命令小结">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LDAP统一认证服务","level":"1.2.5","depth":2,"next":{"title":"磁盘操作命令小结","level":"1.2.6","depth":2,"path":"linux/磁盘操作命令小结.md","ref":"linux/磁盘操作命令小结.md","articles":[]},"previous":{"title":"SSH信任关系","level":"1.2.4","depth":2,"path":"linux/SSH信任关系.md","ref":"linux/SSH信任关系.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"images/golang.png","style":"background: none; max-height: 120px; min-height: 120px"},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"linux/LDAP统一认证服务.md","mtime":"2021-01-07T03:26:48.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T14:18:19.654Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

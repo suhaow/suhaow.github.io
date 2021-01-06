@@ -1,0 +1,979 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>LVM逻辑卷的创建与扩容 · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../ansible/" />
+    
+    
+    <link rel="prev" href="磁盘操作命令小结.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="NFS配置.html">
+            
+                <a href="NFS配置.html">
+            
+                    
+                    NFS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="vsftpd.html">
+            
+                <a href="vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="supervisor.html">
+            
+                <a href="supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="SSH信任关系.html">
+            
+                <a href="SSH信任关系.html">
+            
+                    
+                    SSH信任关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="LDAP统一认证服务.html">
+            
+                <a href="LDAP统一认证服务.html">
+            
+                    
+                    LDAP统一认证服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="磁盘操作命令小结.html">
+            
+                <a href="磁盘操作命令小结.html">
+            
+                    
+                    磁盘操作命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.7" data-path="LVM逻辑卷的创建与扩容.html">
+            
+                <a href="LVM逻辑卷的创建与扩容.html">
+            
+                    
+                    LVM逻辑卷的创建与扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ansible/安装介绍.html">
+            
+                <a href="../ansible/安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ansible/常用模块.html">
+            
+                <a href="../ansible/常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ansible/Playbook.html">
+            
+                <a href="../ansible/Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ansible/roles角色.html">
+            
+                <a href="../ansible/roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    杂七杂八
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../other/GitBook搭建发布.html">
+            
+                <a href="../other/GitBook搭建发布.html">
+            
+                    
+                    GitBook搭建发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >LVM逻辑卷的创建与扩容</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#lvm&#x4ECB;&#x7ECD;"><b></b>LVM&#x4ECB;&#x7ECD;</a></li><ul><li><span class="title-icon "></span><a href="#lvm&#x7B80;&#x4ECB;"><b></b>LVM&#x7B80;&#x4ECB;</a></li><li><span class="title-icon "></span><a href="#lvm&#x4F18;&#x7F3A;&#x70B9;"><b></b>LVM&#x4F18;&#x7F3A;&#x70B9;</a></li><ul><li><span class="title-icon "></span><a href="#&#x4F18;&#x70B9;"><b></b>&#x4F18;&#x70B9;</a></li><li><span class="title-icon "></span><a href="#&#x7F3A;&#x70B9;"><b></b>&#x7F3A;&#x70B9;</a></li></ul><li><span class="title-icon "></span><a href="#&#x57FA;&#x7840;&#x6982;&#x5FF5;"><b></b>&#x57FA;&#x7840;&#x6982;&#x5FF5;</a></li><ul><li><span class="title-icon "></span><a href="#&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;"><b></b>&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;</a></li><li><span class="title-icon "></span><a href="#&#x7269;&#x7406;&#x5377;"><b></b>&#x7269;&#x7406;&#x5377;</a></li><li><span class="title-icon "></span><a href="#&#x5377;&#x7EC4;"><b></b>&#x5377;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x5377;"><b></b>&#x903B;&#x8F91;&#x5377;</a></li><li><span class="title-icon "></span><a href="#&#x7269;&#x7406;&#x5757;"><b></b>&#x7269;&#x7406;&#x5757;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x5757;"><b></b>&#x903B;&#x8F91;&#x5757;</a></li></ul><li><span class="title-icon "></span><a href="#&#x547D;&#x4EE4;&#x6C47;&#x603B;"><b></b>&#x547D;&#x4EE4;&#x6C47;&#x603B;</a></li></ul><li><span class="title-icon "></span><a href="#lvm&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;"><b></b>LVM&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;</a></li><ul><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x5206;&#x533A;"><b></b>&#x67E5;&#x770B;&#x5206;&#x533A;</a></li><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;&#x5206;&#x533A;"><b></b>&#x65B0;&#x5EFA;&#x5206;&#x533A;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;lvm&#x5206;&#x533A;&#x683C;&#x5F0F;"><b></b>&#x8BBE;&#x7F6E;LVM&#x5206;&#x533A;&#x683C;&#x5F0F;</a></li><li><span class="title-icon "></span><a href="#&#x4FDD;&#x5B58;&#x7ED3;&#x679C;"><b></b>&#x4FDD;&#x5B58;&#x7ED3;&#x679C;</a></li><li><span class="title-icon "></span><a href="#&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;"><b></b>&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;pv"><b></b>&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;PV</a></li><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;&#x5377;&#x7EC4;vg"><b></b>&#x65B0;&#x5EFA;&#x5377;&#x7EC4;VG</a></li><li><span class="title-icon "></span><a href="#&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><b></b>&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;</a></li><li><span class="title-icon "></span><a href="#&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;"><b></b>&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;</a></li><li><span class="title-icon "></span><a href="#&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;"><b></b>&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;"><b></b>&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;</a></li></ul><li><span class="title-icon "></span><a href="#lvm&#x7684;&#x6269;&#x5BB9;"><b></b>LVM&#x7684;&#x6269;&#x5BB9;</a></li><ul><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;"><b></b>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;"><b></b>&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;"><b></b>&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;</a></li><li><span class="title-icon "></span><a href="#&#x6269;&#x5BB9;&#x5377;&#x7EC4;"><b></b>&#x6269;&#x5BB9;&#x5377;&#x7EC4;</a></li><li><span class="title-icon "></span><a href="#&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;"><b></b>&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;</a></li><li><span class="title-icon "></span><a href="#&#x67E5;&#x770B;&#x7ED3;&#x679C;"><b></b>&#x67E5;&#x770B;&#x7ED3;&#x679C;</a></li></ul><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></div><a href="#lvm&#x4ECB;&#x7ECD;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="lvm&#x4ECB;&#x7ECD;"><a name="lvm&#x4ECB;&#x7ECD;" class="anchor-navigation-ex-anchor" href="#lvm&#x4ECB;&#x7ECD;"><i class="fa fa-link" aria-hidden="true"></i></a>LVM&#x4ECB;&#x7ECD;</h1>
+<h2 id="lvm&#x7B80;&#x4ECB;"><a name="lvm&#x7B80;&#x4ECB;" class="anchor-navigation-ex-anchor" href="#lvm&#x7B80;&#x4ECB;"><i class="fa fa-link" aria-hidden="true"></i></a>LVM&#x7B80;&#x4ECB;</h2>
+<p>&#x5168;&#x79F0;&#x903B;&#x8F91;&#x5377;&#x7BA1;&#x7406;&#x5668;(Logic Volume Manager)&#x3002;&#x662F;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x5757;&#x8BBE;&#x5907;&#x548C;&#x7269;&#x7406;&#x8BBE;&#x5907;&#x4E4B;&#x95F4;&#x6DFB;&#x52A0;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x62BD;&#x8C61;&#x5C42;&#x6B21;&#x3002;&#x901A;&#x8FC7;LVM&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x51E0;&#x5757;&#x78C1;&#x76D8;&#xFF08;&#x7269;&#x7406;&#x5377;PV&#xFF09;&#x7EC4;&#x5408;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x5B58;&#x50A8;&#x6C60;&#x6216;&#x5377;&#x7EC4;(VG)&#xFF0C;&#x6700;&#x7EC8;&#x5728;&#x5377;&#x7EC4;&#x7684;&#x57FA;&#x7840;&#x4E0A;&#x518D;&#x5212;&#x5206;&#x903B;&#x8F91;&#x5377;&#x3002;
+LVM&#x7BA1;&#x7406;&#x7740;&#x6240;&#x6709;&#x7269;&#x7406;&#x5377;&#x7684;&#x7269;&#x7406;&#x76D8;&#x533A;&#xFF0C;&#x7EF4;&#x6301;&#x7740;&#x903B;&#x8F91;&#x76D8;&#x533A;&#x548C;&#x7269;&#x7406;&#x76D8;&#x533A;&#x4E4B;&#x95F4;&#x7684;&#x6620;&#x5C04;&#x3002;LVM&#x903B;&#x8F91;&#x8BBE;&#x5907;&#x5411;&#x4E0A;&#x5C42;&#x5E94;&#x7528;&#x63D0;&#x4F9B;&#x4E86;&#x548C;&#x7269;&#x7406;&#x78C1;&#x76D8;&#x76F8;&#x540C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5982;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x521B;&#x5EFA;&#x548C;&#x6570;&#x636E;&#x7684;&#x8BBF;&#x95EE;&#x7B49;&#x3002;&#x4F46;LVM&#x903B;&#x8F91;&#x8BBE;&#x5907;&#x4E0D;&#x53D7;&#x7269;&#x7406;&#x7EA6;&#x675F;&#x7684;&#x9650;&#x5236;&#xFF0C;&#x903B;&#x8F91;&#x5377;&#x4E0D;&#x5FC5;&#x662F;&#x8FDE;&#x7EED;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x8DE8;&#x8D8A;&#x8BB8;&#x591A;&#x7269;&#x7406;&#x5377;&#xFF0C;&#x5E76;&#x4E14;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x4EFB;&#x610F;&#x7684;&#x8C03;&#x6574;&#x5927;&#x5C0F;&#x3002;&#x76F8;&#x6BD4;&#x7269;&#x7406;&#x78C1;&#x76D8;&#x6765;&#x8BF4;&#xFF0C;&#x66F4;&#x6613;&#x4E8E;&#x78C1;&#x76D8;&#x7A7A;&#x95F4;&#x7684;&#x7BA1;&#x7406;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4E0B;&#x56FE;&#x5E2E;&#x52A9;&#x7406;&#x89E3;&#x3002;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20200930151237.png" data-lightbox="99169182-8b19-45e2-bc6a-8414937a3b15" data-title="image-20200930151208992" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20200930151237.png" alt="image-20200930151208992"></a></p>
+<h2 id="lvm&#x4F18;&#x7F3A;&#x70B9;"><a name="lvm&#x4F18;&#x7F3A;&#x70B9;" class="anchor-navigation-ex-anchor" href="#lvm&#x4F18;&#x7F3A;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>LVM&#x4F18;&#x7F3A;&#x70B9;</h2>
+<h3 id="&#x4F18;&#x70B9;"><a name="&#x4F18;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x4F18;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F18;&#x70B9;</h3>
+<ul>
+<li>&#x5728;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x7684;&#x72B6;&#x6001;&#x4E0B;&#x52A8;&#x6001;&#x7684;&#x6269;&#x5C55;/&#x51CF;&#x5C11;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x5927;&#x5C0F;</li>
+<li>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x53EF;&#x8DE8;&#x591A;&#x4E2A;&#x78C1;&#x76D8;&#xFF0C;&#x4E0D;&#x53D7;&#x7269;&#x7406;&#x78C1;&#x76D8;&#x7684;&#x9650;&#x5236;</li>
+<li>&#x5F53;&#x9700;&#x8981;&#x5BFC;&#x51FA;&#x6574;&#x4E2A;&#x5377;&#x7EC4;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x53F0;&#x673A;&#x5668;&#x66F4;&#x52A0;&#x65B9;&#x4FBF;&#x5FEB;&#x6377;</li>
+<li>&#x53EF;&#x901A;&#x8FC7;&#x78C1;&#x76D8;&#x955C;&#x50CF;&#x7684;&#x65B9;&#x5F0F;&#x540C;&#x6B65;&#x5907;&#x4EFD;&#x91CD;&#x8981;&#x7684;&#x6570;&#x636E;&#x5230;&#x5176;&#x4ED6;&#x7269;&#x7406;&#x78C1;&#x76D8;</li>
+</ul>
+<h3 id="&#x7F3A;&#x70B9;"><a name="&#x7F3A;&#x70B9;" class="anchor-navigation-ex-anchor" href="#&#x7F3A;&#x70B9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7F3A;&#x70B9;</h3>
+<ul>
+<li>&#x5F53;&#x5377;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x78C1;&#x76D8;&#x635F;&#x574F;&#x65F6;&#xFF0C;&#x6574;&#x4E2A;&#x5377;&#x7EC4;&#x90FD;&#x4F1A;&#x6536;&#x5230;&#x5F71;&#x54CD;</li>
+<li>&#x5F53;&#x4ECE;&#x5377;&#x7EC4;&#x4E2D;&#x79FB;&#x9664;&#x4E00;&#x4E2A;&#x78C1;&#x76D8;&#x65F6;&#x5FC5;&#x987B;&#x4F7F;&#x7528;<code>vgreduce</code>&#x547D;&#x4EE4;</li>
+</ul>
+<h2 id="&#x57FA;&#x7840;&#x6982;&#x5FF5;"><a name="&#x57FA;&#x7840;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x57FA;&#x7840;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x57FA;&#x7840;&#x6982;&#x5FF5;</h2>
+<h3 id="&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;"><a name="&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;" class="anchor-navigation-ex-anchor" href="#&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x8D28;</h3>
+<p>&#x6307;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x7684;&#x5B58;&#x50A8;&#x8BBE;&#x7F6E;&#xFF0C;&#x5982;<code>/dev/sda</code>&#x7B49;&#xFF0C;&#x662F;&#x5B58;&#x50A8;&#x7CFB;&#x7EDF;&#x6700;&#x4F4E;&#x5C42;&#x7684;&#x5B58;&#x50A8;&#x5355;&#x5143;</p>
+<h3 id="&#x7269;&#x7406;&#x5377;"><a name="&#x7269;&#x7406;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x7269;&#x7406;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7269;&#x7406;&#x5377;</h3>
+<p>&#x7B80;&#x79F0;<code>PV(Physical Volume)</code>&#x3002;&#x7269;&#x7406;&#x5377;&#x662F;&#x6307;&#x786C;&#x76D8;&#x5206;&#x533A;&#x6216;&#x903B;&#x8F91;&#x4E0A;&#x4E0E;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x5177;&#x6709;&#x540C;&#x6837;&#x540C;&#x80FD;&#x7684;&#x8BBE;&#x5907;&#xFF0C;&#x662F;<code>LVM</code>&#x7684;&#x57FA;&#x672C;&#x5B58;&#x50A8;&#x903B;&#x8F91;&#x5757;&#xFF0C;&#x4F46;&#x548C;&#x57FA;&#x672C;&#x7684;&#x7269;&#x7406;&#x5B58;&#x50A8;&#x4ECB;&#x7ECD;&#x6BD4;&#x8F83;&#xFF0C;&#x5374;&#x5305;&#x542B;&#x6709;&#x4E0E;<code>LVM</code>&#x76F8;&#x5173;&#x7684;&#x7BA1;&#x7406;&#x53C2;&#x6570;</p>
+<h3 id="&#x5377;&#x7EC4;"><a name="&#x5377;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x5377;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5377;&#x7EC4;</h3>
+<p>&#x7B80;&#x79F0;<code>VG(Volume Group)</code>&#x3002;<code>LVM</code>&#x5377;&#x7EC4;&#x7C7B;&#x4F3C;&#x4E8E;&#x975E;<code>LVM</code>&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x7269;&#x7406;&#x786C;&#x76D8;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x5377;&#x7EC4;&#x4E0A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;<code>LVM</code>&#x5206;&#x533A;(&#x903B;&#x8F91;&#x5377;)&#x3002;<code>LVM</code>&#x5377;&#x7EC4;&#x7531;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x7269;&#x7406;&#x5377;&#x7EC4;&#x6210;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x589E;&#x52A0;&#x5377;&#x7EC4;&#x4E2D;&#x7684;&#x7269;&#x7406;&#x5377;&#x5B9E;&#x73B0;&#x6269;&#x5BB9;</p>
+<h3 id="&#x903B;&#x8F91;&#x5377;"><a name="&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x5377;</h3>
+<p>&#x7B80;&#x79F0; <code>LV(Logical Volume)</code>&#x3002;<code>LVM</code>&#x903B;&#x8F91;&#x5377;&#x7C7B;&#x4F3C;&#x4E8E;&#x975E;<code>LVM</code>&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x786C;&#x76D8;&#x5206;&#x533A;&#xFF0C;&#x5728;&#x903B;&#x8F91;&#x5377;&#x4E4B;&#x4E0A;&#x53EF;&#x4EE5;&#x5EFA;&#x7ACB;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;</p>
+<h3 id="&#x7269;&#x7406;&#x5757;"><a name="&#x7269;&#x7406;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x7269;&#x7406;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x7269;&#x7406;&#x5757;</h3>
+<p>&#x7B80;&#x79F0;PE(Physical Extent)&#x3002;&#x6BCF;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x5377;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x79F0;&#x4E3A;PE&#x7684;&#x57FA;&#x672C;&#x5355;&#x5143;&#xFF0C;&#x5177;&#x6709;&#x552F;&#x4E00;&#x7F16;&#x53F7;&#x7684;PE&#x662F;&#x53EF;&#x4EE5;&#x88AB;<code>LVM</code>&#x5BFB;&#x5740;&#x7684;&#x6700;&#x5C0F;&#x5355;&#x5143;&#xFF0C;PE&#x7684;&#x5927;&#x5C0F;&#x662F;&#x53EF;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;<code>4MB</code></p>
+<h3 id="&#x903B;&#x8F91;&#x5757;"><a name="&#x903B;&#x8F91;&#x5757;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x5757;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x5757;</h3>
+<p>&#x7B80;&#x79F0;<code>lE(Logical Extent)</code>&#x3002;&#x903B;&#x8F91;&#x5377;&#x88AB;&#x5212;&#x5206;&#x4E3A;&#x7684;&#x6700;&#x5C0F;&#x53EF;&#x5BFB;&#x5740;&#x7684;&#x57FA;&#x672C;&#x5355;&#x4F4D;&#x79F0;&#x4E3A;LE&#x3002;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x5377;&#x7EC4;&#x4E2D;&#xFF0C;LE&#x7684;&#x5927;&#x5C0F;&#x548C;PE&#x662F;&#x76F8;&#x540C;&#x7684;&#xFF0C; &#x5E76;&#x4E14;&#x4E00;&#x4E00;&#x5BF9;&#x5E94;&#x3002;</p>
+<h2 id="&#x547D;&#x4EE4;&#x6C47;&#x603B;"><a name="&#x547D;&#x4EE4;&#x6C47;&#x603B;" class="anchor-navigation-ex-anchor" href="#&#x547D;&#x4EE4;&#x6C47;&#x603B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x547D;&#x4EE4;&#x6C47;&#x603B;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x529F;&#x80FD;</th>
+<th>&#x7269;&#x7406;&#x5377;&#x7BA1;&#x7406;PV</th>
+<th>&#x5377;&#x7EC4;&#x7BA1;&#x7406;VG</th>
+<th>&#x903B;&#x8F91;&#x5377;&#x7BA1;&#x7406;LV</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x626B;&#x63CF; (Scan)</td>
+<td>pvscan</td>
+<td>vgscan</td>
+<td>lvscan</td>
+</tr>
+<tr>
+<td>&#x5EFA;&#x7ACB; (Create)</td>
+<td>pvcreate</td>
+<td>vgcreate</td>
+<td>lvcreate</td>
+</tr>
+<tr>
+<td>&#x663E;&#x793A; (Display)</td>
+<td>pvdisplay</td>
+<td>vgdisplay</td>
+<td>lvdisplay</td>
+</tr>
+<tr>
+<td>&#x5220;&#x9664; (Remove)</td>
+<td>pvremove</td>
+<td>vgremove</td>
+<td>lvremove</td>
+</tr>
+<tr>
+<td>&#x6269;&#x5C55; (Extend)</td>
+<td>-</td>
+<td>vgextend</td>
+<td>lvextend</td>
+</tr>
+<tr>
+<td>&#x51CF;&#x5C11; (Reduce)</td>
+<td>-</td>
+<td>vgreduce</td>
+<td>lvreduce</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="lvm&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;"><a name="lvm&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#lvm&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>LVM&#x7684;&#x521B;&#x5EFA;&#x4E0E;&#x6302;&#x8F7D;</h1>
+<p>&#x6309;&#x7167;&#x5982;&#x4E0B;&#x6B65;&#x9AA4;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#xFF0C;&#x82E5;&#x6709;&#x547D;&#x4EE4;&#x4E0D;&#x6E05;&#x695A;&#x81EA;&#x884C;<code>Google</code></p>
+<h2 id="&#x67E5;&#x770B;&#x5206;&#x533A;"><a name="&#x67E5;&#x770B;&#x5206;&#x533A;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x5206;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x5206;&#x533A;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lsblk </span>
+NAME            MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda               <span class="token number">8</span>:0    <span class="token number">0</span>  80G  <span class="token number">0</span> disk 
+&#x251C;&#x2500;sda1            <span class="token number">8</span>:1    <span class="token number">0</span>   1G  <span class="token number">0</span> part /boot
+&#x2514;&#x2500;sda2            <span class="token number">8</span>:2    <span class="token number">0</span>  19G  <span class="token number">0</span> part 
+  &#x251C;&#x2500;centos-root <span class="token number">253</span>:0    <span class="token number">0</span>  17G  <span class="token number">0</span> lvm  /
+  &#x2514;&#x2500;centos-swap <span class="token number">253</span>:1    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;<code>lsblk</code>&#x53D1;&#x73B0;&#x6211;&#x4EEC;&#x76EE;&#x524D;&#x6709;&#x4E24;&#x4E2A;&#x5206;&#x533A;<code>sda1</code>&#x548C;<code>sda2</code>&#xFF0C;&#x5176;&#x4E2D;<code>sda1</code>&#x6302;&#x8F7D;&#x5230;&#x4E86;<code>/boot</code>&#x76EE;&#x5F55;&#xFF0C;&#x800C;<code>sda2</code>&#x5206;&#x533A;&#x4E0B;&#x5219;&#x62E5;&#x6709;&#x4E24;&#x4E2A;&#x903B;&#x8F91;&#x5377;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#x5F00;&#x59CB;&#x64CD;&#x4F5C;</p>
+<h2 id="&#x65B0;&#x5EFA;&#x5206;&#x533A;"><a name="&#x65B0;&#x5EFA;&#x5206;&#x533A;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x5206;&#x533A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;&#x5206;&#x533A;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># fdisk /dev/sda</span>
+Welcome to <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.23</span>.2<span class="token punctuation">)</span>.
+
+Changes will remain <span class="token keyword">in</span> memory only, <span class="token keyword">until</span> you decide to <span class="token function">write</span> them.
+Be careful before using the <span class="token function">write</span> command.
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: m
+Command action
+   a   toggle a bootable flag
+   b   edit bsd disklabel
+   c   toggle the dos compatibility flag
+   d   delete a partition
+   g   create a new empty GPT partition table
+   G   create an IRIX <span class="token punctuation">(</span>SGI<span class="token punctuation">)</span> partition table
+   l   list known partition types
+   m   print this menu
+   n   <span class="token function">add</span> a new partition
+   o   create a new empty DOS partition table
+   p   print the partition table
+   q   quit without saving changes
+   s   create a new empty Sun disklabel
+   t   change a partition&apos;s system <span class="token function">id</span>
+   u   change display/entry <span class="token function">units</span>
+   <span class="token function">v</span>   verify the partition table
+   w   <span class="token function">write</span> table to disk and <span class="token builtin class-name">exit</span>
+   x   extra functionality <span class="token punctuation">(</span>experts only<span class="token punctuation">)</span>
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: n
+Partition type:
+   p   primary <span class="token punctuation">(</span><span class="token number">2</span> primary, <span class="token number">0</span> extended, <span class="token number">2</span> <span class="token function">free</span><span class="token punctuation">)</span>
+   e   extended
+Select <span class="token punctuation">(</span>default p<span class="token punctuation">)</span>: p
+Partition number <span class="token punctuation">(</span><span class="token number">3,4</span>, default <span class="token number">3</span><span class="token punctuation">)</span>: <span class="token number">3</span>
+<span class="token comment"># &#x6307;&#x5B9A;&#x7B2C;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x503C; &#x76F4;&#x63A5;&#x56DE;&#x8F66;</span>
+First sector <span class="token punctuation">(</span><span class="token number">41943040</span>-167772159, default <span class="token number">41943040</span><span class="token punctuation">)</span>: 
+Using default value <span class="token number">41943040</span>
+<span class="token comment"># &#x6307;&#x5B9A;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#xFF0C;&#x4F7F;&#x7528;+size{K,M,G} &#x7684;&#x5F62;&#x5F0F;&#x8BA9;fdisk &#x81EA;&#x5DF1;&#x7B97;</span>
+Last sector, +sectors or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">41943040</span>-167772159, default <span class="token number">167772159</span><span class="token punctuation">)</span>: +4G
+Partition <span class="token number">3</span> of <span class="token builtin class-name">type</span> Linux and of size <span class="token number">4</span> GiB is <span class="token builtin class-name">set</span>
+</code></pre>
+<p>&#x901A;&#x8FC7;<code>fdisk</code>&#x4E2D;&#x7684;<code>n</code>&#x53EF;&#x8FDB;&#x884C;&#x65B0;&#x589E;&#x5206;&#x533A;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x6700;&#x7EC8;&#x5C31;&#x65B0;&#x5EFA;&#x4E86;&#x5927;&#x5C0F;&#x4E3A;4G&#x7684;<code>/dev/sda3</code>&#x5206;&#x533A;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x5206;&#x533A;&#x683C;&#x5F0F;&#x8BBE;&#x7F6E;&#x4E3A; LVM&#x3002;</p>
+<h2 id="&#x8BBE;&#x7F6E;lvm&#x5206;&#x533A;&#x683C;&#x5F0F;"><a name="&#x8BBE;&#x7F6E;lvm&#x5206;&#x533A;&#x683C;&#x5F0F;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;lvm&#x5206;&#x533A;&#x683C;&#x5F0F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x7F6E;LVM&#x5206;&#x533A;&#x683C;&#x5F0F;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token comment"># t &#x5BF9;&#x5E94;&#x64CD;&#x4F5C;&#x4E3A; change a partition&apos;s system id</span>
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: t
+<span class="token comment"># &#x5206;&#x533A;&#x5E8F;&#x53F7;&#xFF0C;&#x5BF9;&#x521A;&#x65B0;&#x5EFA;&#x7684; sda3 &#x8FDB;&#x884C;&#x64CD;&#x4F5C;</span>
+Partition number <span class="token punctuation">(</span><span class="token number">1</span>-3, default <span class="token number">3</span><span class="token punctuation">)</span>: <span class="token number">3</span>
+
+<span class="token comment"># 8e &#x5BF9;&#x5E94;&#x7684;&#x5C31;&#x662F; Linux LVM&#xFF0C; &#x53EF;&#x6572;&#x5165; L &#x663E;&#x793A;&#x6240;&#x6709;&#x7684;system id</span>
+Hex code <span class="token punctuation">(</span>type L to list all codes<span class="token punctuation">)</span>: 8e
+Changed <span class="token builtin class-name">type</span> of partition <span class="token string">&apos;Linux&apos;</span> to <span class="token string">&apos;Linux LVM&apos;</span>
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: p
+
+Disk /dev/sda: <span class="token number">85.9</span> GB, <span class="token number">85899345920</span> bytes, <span class="token number">167772160</span> sectors
+Units <span class="token operator">=</span> sectors of <span class="token number">1</span> * <span class="token number">512</span> <span class="token operator">=</span> <span class="token number">512</span> bytes
+Sector size <span class="token punctuation">(</span>logical/physical<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+I/O size <span class="token punctuation">(</span>minimum/optimal<span class="token punctuation">)</span>: <span class="token number">512</span> bytes / <span class="token number">512</span> bytes
+Disk label type: dos
+Disk identifier: 0x000d8731
+
+   Device Boot      Start         End      Blocks   Id  System
+/dev/sda1   *        <span class="token number">2048</span>     <span class="token number">2099199</span>     <span class="token number">1048576</span>   <span class="token number">83</span>  Linux
+/dev/sda2         <span class="token number">2099200</span>    <span class="token number">41943039</span>    <span class="token number">19921920</span>   8e  Linux LVM
+/dev/sda3        <span class="token number">41943040</span>    <span class="token number">50331647</span>     <span class="token number">4194304</span>   8e  Linux LVM
+</code></pre>
+<p>&#x901A;&#x8FC7;<code>p</code>&#x6253;&#x5370;&#x51FA;&#x7684;&#x7ED3;&#x679C;&#x53EF;&#x770B;&#x51FA;&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x65B0;&#x5EFA;&#x7684;<code>/dev/sda3</code>&#x5206;&#x533A;&#x5DF2;&#x7ECF;&#x8BBE;&#x7F6E;&#x4E3A;&#x4E86;<code>Linux LVM</code>&#x683C;&#x5F0F;</p>
+<h2 id="&#x4FDD;&#x5B58;&#x7ED3;&#x679C;"><a name="&#x4FDD;&#x5B58;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x4FDD;&#x5B58;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4FDD;&#x5B58;&#x7ED3;&#x679C;</h2>
+<pre class="language-"><code class="lang-bash">Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: w
+The partition table has been altered<span class="token operator">!</span>
+
+Calling ioctl<span class="token punctuation">(</span><span class="token punctuation">)</span> to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error <span class="token number">16</span>: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next <span class="token function">reboot</span> or after you run partprobe<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> or kpartx<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+Syncing disks.
+</code></pre>
+<p><code>w</code>&#x4E3A;&#x4FDD;&#x5B58;&#x9000;&#x51FA;&#xFF0C;&#x82E5;&#x60F3;&#x8981;&#x653E;&#x5F03;&#x4FEE;&#x6539;&#xFF0C;&#x6572;&#x5165;<code>q</code>&#x5373;&#x53EF;</p>
+<h2 id="&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;"><a name="&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x540C;&#x6B65;&#x7CFB;&#x7EDF;&#x5206;&#x533A;&#x4FE1;&#x606F;</h2>
+<p>&#x5728;&#x4E0A;&#x8FF0;&#x7684;&#x4FEE;&#x6539;&#x5B8C;&#x540E;&#xFF0C;&#x5185;&#x6838;&#x4ECD;&#x7136;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x65E7;&#x7684;&#x5206;&#x533A;&#x8868;&#xFF0C;&#x82E5;&#x60F3;&#x8981;&#x901A;&#x77E5;&#x5185;&#x6838;&#x66F4;&#x65B0;&#x5206;&#x533A;&#x4FE1;&#x606F;&#xFF0C;&#x53EA;&#x6709;&#x5F53;&#x91CD;&#x542F;&#x540E; &#x6216; &#x8FD0;&#x884C; <code>partprobe</code> &#x6216; <code>kpartx</code> &#x547D;&#x4EE4;&#x624D;&#x53EF;&#x4EE5;&#x3002;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># partprobe</span>
+</code></pre>
+<p>&#x66F4;&#x65B0;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x901A;&#x8FC7;<code>lsblk</code>&#x67E5;&#x770B;&#x5C31;&#x4F1A;&#x591A;&#x51FA;&#x4E00;&#x4E2A; 4G&#x7684;<code>sda3</code>&#x5206;&#x533A;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lsblk </span>
+NAME            MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda               <span class="token number">8</span>:0    <span class="token number">0</span>  80G  <span class="token number">0</span> disk 
+&#x251C;&#x2500;sda1            <span class="token number">8</span>:1    <span class="token number">0</span>   1G  <span class="token number">0</span> part /boot
+&#x251C;&#x2500;sda2            <span class="token number">8</span>:2    <span class="token number">0</span>  19G  <span class="token number">0</span> part 
+&#x2502; &#x251C;&#x2500;centos-root <span class="token number">253</span>:0    <span class="token number">0</span>  17G  <span class="token number">0</span> lvm  /
+&#x2502; &#x2514;&#x2500;centos-swap <span class="token number">253</span>:1    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+&#x2514;&#x2500;sda3            <span class="token number">8</span>:3    <span class="token number">0</span>   4G  <span class="token number">0</span> part
+</code></pre>
+<p>&#x6B64;&#x65F6;&#x6211;&#x4EEC;&#x7684;&#x7269;&#x7406;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x8BBE;&#x7F6E;&#x5B8C;&#x6BD5;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C31;&#x662F;&#x548C;<code>LVM</code>&#x76F8;&#x5173;&#x7684;&#x64CD;&#x4F5C;</p>
+<h2 id="&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;pv"><a name="&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;pv" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;pv"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;&#x7269;&#x7406;&#x5377;PV</h2>
+<p>&#x5C06;&#x521A;&#x624D;&#x65B0;&#x5EFA;&#x7684;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x521B;&#x5EFA;&#x4E3A;&#x7269;&#x7406;&#x5377;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># pvcreate /dev/sda3</span>
+  Physical volume <span class="token string">&quot;/dev/sda3&quot;</span> successfully created.
+
+<span class="token comment"># &#x67E5;&#x770B;&#x7269;&#x7406;&#x5377;&#x4FE1;&#x606F;</span>
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># pvdisplay </span>
+  --- Physical volume ---
+  PV Name               /dev/sda2
+  VG Name               centos
+  PV Size               <span class="token operator">&lt;</span><span class="token number">19.00</span> GiB / not usable <span class="token number">3.00</span> MiB
+  Allocatable           <span class="token function">yes</span> <span class="token punctuation">(</span>but full<span class="token punctuation">)</span>
+  PE Size               <span class="token number">4.00</span> MiB
+  Total PE              <span class="token number">4863</span>
+  Free PE               <span class="token number">0</span>
+  Allocated PE          <span class="token number">4863</span>
+  PV UUID               eJxxnr-dqUB-oZlr-j6Hr-MUWl-oJs6-JUBALe
+
+  <span class="token string">&quot;/dev/sda3&quot;</span> is a new physical volume of <span class="token string">&quot;4.00 GiB&quot;</span>
+  --- NEW Physical volume ---
+  PV Name               /dev/sda3
+  VG Name               
+  PV Size               <span class="token number">4.00</span> GiB
+  Allocatable           NO
+  PE Size               <span class="token number">0</span>   
+  Total PE              <span class="token number">0</span>
+  Free PE               <span class="token number">0</span>
+  Allocated PE          <span class="token number">0</span>
+  PV UUID               1Xed3b-fkNW-utT5-xY7b-26e2-6soa-VfGEOP
+</code></pre>
+<h2 id="&#x65B0;&#x5EFA;&#x5377;&#x7EC4;vg"><a name="&#x65B0;&#x5EFA;&#x5377;&#x7EC4;vg" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x5377;&#x7EC4;vg"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;&#x5377;&#x7EC4;VG</h2>
+<p>&#x547D;&#x4EE4;&#x683C;&#x5F0F;</p>
+<pre class="language-"><code>vgcreate VG_new PV ...
+</code></pre><p>&#x65B0;&#x5EFA;&#x540D;&#x4E3A;<code>suhwvg</code>&#x7684;&#x5377;&#x7EC4;&#xFF0C;&#x5E76;&#x5C06;&#x7269;&#x7406;&#x5377;<code>/dev/sda3</code> &#x52A0;&#x5165;&#x5230;<code>suhwvg</code>&#x4E2D;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgcreate suhwvg /dev/sda3</span>
+  Volume group <span class="token string">&quot;suhwvg&quot;</span> successfully created
+</code></pre>
+<p>&#x67E5;&#x770B;&#x7ED3;&#x679C;&#x521B;&#x5EFA;&#x6210;&#x529F;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgscan</span>
+  Reading volume <span class="token function">groups</span> from cache.
+  Found volume group <span class="token string">&quot;centos&quot;</span> using metadata <span class="token builtin class-name">type</span> lvm2
+  Found volume group <span class="token string">&quot;suhwvg&quot;</span> using metadata <span class="token builtin class-name">type</span> lvm2
+</code></pre>
+<p>&#x67E5;&#x770B;&#x5377;&#x7EC4;VG&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgdisplay </span>
+
+  --- Volume group ---
+  VG Name               suhwvg
+  System ID             
+  Format                lvm2
+  Metadata Areas        <span class="token number">1</span>
+  Metadata Sequence No  <span class="token number">1</span>
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                <span class="token number">0</span>
+  Cur LV                <span class="token number">0</span>
+  Open LV               <span class="token number">0</span>
+  Max PV                <span class="token number">0</span>
+  Cur PV                <span class="token number">1</span>
+  Act PV                <span class="token number">1</span>
+  VG Size               <span class="token operator">&lt;</span><span class="token number">4.00</span> GiB
+  PE Size               <span class="token number">4.00</span> MiB
+  Total PE              <span class="token number">1023</span>
+  Alloc PE / Size       <span class="token number">0</span> / <span class="token number">0</span>   
+  Free  PE / Size       <span class="token number">1023</span> / <span class="token operator">&lt;</span><span class="token number">4.00</span> GiB
+  VG UUID               mVeVDv-UwuJ-pzMG-KEBb-95gW-YoKh-aww8uX
+</code></pre>
+<p>&#x81F3;&#x6B64;<code>PV</code>&#x548C;<code>VG</code>&#x90FD;&#x5DF2;&#x51C6;&#x5907;&#x5C31;&#x7EEA;&#xFF0C;&#x5728;VG&#x57FA;&#x7840;&#x4E0A;&#x5212;&#x5206;&#x903B;&#x8F91;&#x5377;&#x5373;&#x53EF;</p>
+<h2 id="&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><a name="&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x65B0;&#x5EFA;&#x903B;&#x8F91;&#x5377;</h2>
+<p>&#x5728;<code>suhwvg</code>&#x5377;&#x7EC4;&#x4E2D;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;2G&#x7684;&#x540D;&#x4E3A; <code>suhwlv</code>&#x7684;&#x903B;&#x8F91;&#x5377;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lvcreate -L 2G -n suhwlv suhwvg</span>
+WARNING: xfs signature detected on /dev/suhwvg/suhwlv at offset <span class="token number">0</span>. Wipe it? <span class="token punctuation">[</span>y/n<span class="token punctuation">]</span>: y
+  Wiping xfs signature on /dev/suhwvg/suhwlv.
+  Logical volume <span class="token string">&quot;suhwlv&quot;</span> created.
+</code></pre>
+<p>&#x67E5;&#x770B;&#x903B;&#x8F91;&#x5377;&#x8BE6;&#x60C5;</p>
+<pre class="language-"><code class="lang-bash">  <span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lvdisplay </span>
+
+  --- Logical volume ---
+  LV Path                /dev/suhwvg/suhwlv
+  LV Name                suhwlv
+  VG Name                suhwvg
+  LV UUID                j8VX5e-fltA-MWVx-CGrU-BuDs-w4c1-96pC79
+  LV Write Access        read/write
+  LV Creation host, <span class="token function">time</span> suhw, <span class="token number">2020</span>-09-30 <span class="token number">10</span>:58:46 +0800
+  LV Status              available
+  <span class="token comment"># open                 0</span>
+  LV Size                <span class="token number">2.00</span> GiB
+  Current LE             <span class="token number">512</span>
+  Segments               <span class="token number">1</span>
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently <span class="token builtin class-name">set</span> to     <span class="token number">8192</span>
+  Block device           <span class="token number">253</span>:2
+</code></pre>
+<h2 id="&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;"><a name="&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;" class="anchor-navigation-ex-anchor" href="#&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x683C;&#x5F0F;&#x5316;&#x903B;&#x8F91;&#x5377;</h2>
+<p>&#x903B;&#x8F91;&#x5377;&#x65B0;&#x5EFA;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x521A;&#x624D;&#x65B0;&#x589E;&#x7684;<code>suhwlv</code>&#x903B;&#x8F91;&#x5377;&#x683C;&#x5F0F;&#x5316;&#x4E3A;<code>xfs</code>&#x683C;&#x5F0F;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># mkfs.xfs /dev/suhwvg/suhwlv </span>
+meta-data<span class="token operator">=</span>/dev/suhwvg/suhwlv     <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">131072</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">sparse</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">524288</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal log           <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+</code></pre>
+<h2 id="&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;"><a name="&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;" class="anchor-navigation-ex-anchor" href="#&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x7F6E;&#x6C38;&#x4E45;&#x6302;&#x8F7D;</h2>
+<p>&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># mkdir /home/suhw</span>
+</code></pre>
+<p>&#x7F16;&#x8F91; <code>/etc/fstab</code> &#x6587;&#x4EF6;&#xFF0C;&#x672B;&#x5C3E;&#x65B0;&#x589E;&#x4E00;&#x884C;</p>
+<pre class="language-"><code class="lang-bash">/dev/suhwvg/suhwlv      /home/suhw      xfs     defaults        <span class="token number">0</span> <span class="token number">0</span>
+</code></pre>
+<p>&#x6BCF;&#x4E00;&#x5217;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x7684;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x9700;&#x8981;&#x6302;&#x8F7D;&#x7684;&#x8BBE;&#x5907;&#x540D;</li>
+<li>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7684;&#x6302;&#x8F7D;&#x70B9;</li>
+<li>&#x6302;&#x8F7D;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7C7B;&#x578B;</li>
+<li>&#x6302;&#x8F7D;&#x6240;&#x9700;&#x53C2;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x4F7F;&#x7528;default</li>
+<li>&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x662F;&#x5426;&#x9700;&#x8981;dump</li>
+<li>&#x662F;&#x5426;&#x9700;&#x8981;&#x5F00;&#x673A;&#x8FDB;&#x884C;<code>fsck</code> &#x68C0;&#x67E5;&#xFF08;&#x4E00;&#x822C;&#x6839;&#x5206;&#x533A;&#x8BBE;&#x7F6E;&#x4E3A;1&#xFF0C;/boot&#x5206;&#x533A;&#x8BBE;&#x7F6E;&#x4E3A;2&#xFF0C; 0&#x4EE3;&#x8868;&#x4E0D;&#x9700;&#x8981;&#xFF09;</li>
+</ol>
+<p>&#x4F7F;&#x7528;<code>mount</code>&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x6302;&#x8F7D;&#xFF0C;<code>-a</code>&#x53C2;&#x6570;&#x5373;&#x53EF;&#x6839;&#x636E;<code>/etc/fstab</code>&#x4E2D;&#x7684;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x6302;&#x8F7D;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># mount -a</span>
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;"><a name="&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x6302;&#x8F7D;&#x7ED3;&#x679C;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># df -hT</span>
+Filesystem                Type      Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   xfs        17G 1013M   16G   <span class="token number">6</span>% /
+devtmpfs                  devtmpfs  <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /dev
+tmpfs                     tmpfs     <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /dev/shm
+tmpfs                     tmpfs     <span class="token number">3</span>.9G   41M  <span class="token number">3</span>.8G   <span class="token number">2</span>% /run
+tmpfs                     tmpfs     <span class="token number">3</span>.9G     <span class="token number">0</span>  <span class="token number">3</span>.9G   <span class="token number">0</span>% /sys/fs/cgroup
+/dev/sda1                 xfs      1014M  145M  870M  <span class="token number">15</span>% /boot
+tmpfs                     tmpfs     783M     <span class="token number">0</span>  783M   <span class="token number">0</span>% /run/user/0
+/dev/mapper/suhwvg-suhwlv xfs       <span class="token number">2</span>.0G   33M  <span class="token number">2</span>.0G   <span class="token number">2</span>% /home/suhw
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x65B0;&#x5EFA;&#x7684;&#x903B;&#x8F91;&#x5377;&#x7684;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x683C;&#x5F0F;&#x4E3A;<code>xfs</code>&#xFF0C;&#x5927;&#x5C0F;&#x4E3A;2G&#xFF0C;&#x5E76;&#x4E14;&#x6302;&#x8F7D;&#x5230;&#x4E86;<code>home/suhw</code>&#x3002;&#x81F3;&#x6B64;&#x6302;&#x8F7D;&#x6210;&#x529F;&#xFF0C;&#x540E;&#x7EED;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5BF9;&#x8BE5;&#x903B;&#x8F91;&#x5377;&#x8FDB;&#x884C;&#x6269;&#x5BB9;/&#x51CF;&#x5C11;&#x7B49;&#x64CD;&#x4F5C;&#x3002;</p>
+<hr>
+<h1 id="lvm&#x7684;&#x6269;&#x5BB9;"><a name="lvm&#x7684;&#x6269;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#lvm&#x7684;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>LVM&#x7684;&#x6269;&#x5BB9;</h1>
+<p>&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7684;&#x67D0;&#x4E2A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7A7A;&#x95F4;&#x4E0D;&#x8DB3;&#x65F6;&#xFF0C;&#x6269;&#x5BB9;&#x662F;&#x5E38;&#x6709;&#x7684;&#x4E8B;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x5C06;&#x4E4B;&#x524D;&#x7684;&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;&#x5230;8G&#x3002;</p>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x5377;&#x7EC4;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x662F;&#x5426;&#x591F;&#x6211;&#x4EEC;&#x5BF9;&#x903B;&#x8F91;&#x5377;&#x8FDB;&#x884C;&#x6269;&#x5BB9;&#x64CD;&#x4F5C;&#xFF0C;&#x591F;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>lvextend</code>&#x5373;&#x53EF;&#xFF0C;&#x4E0D;&#x591F;&#x8FD8;&#x9700;&#x589E;&#x5927;&#x5377;&#x7EC4;&#x4E2D;&#x7684;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x540E;&#x518D;&#x4F7F;&#x7528;<code>lvextend</code>&#x5BF9;&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;&#x3002;&#x6574;&#x4F53;&#x6D41;&#x7A0B;&#x5927;&#x81F4;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/20200930150213.png" data-lightbox="6500174a-0d66-4e86-b2e6-3cb8c25ac1bc" data-title="image-20200930150202544" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/20200930150213.png" alt="image-20200930150202544"></a></p>
+<h2 id="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;"><a name="&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x4FE1;&#x606F;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lsblk </span>
+NAME              MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda                 <span class="token number">8</span>:0    <span class="token number">0</span>  80G  <span class="token number">0</span> disk 
+&#x251C;&#x2500;sda1              <span class="token number">8</span>:1    <span class="token number">0</span>   1G  <span class="token number">0</span> part /boot
+&#x251C;&#x2500;sda2              <span class="token number">8</span>:2    <span class="token number">0</span>  19G  <span class="token number">0</span> part 
+&#x2502; &#x251C;&#x2500;centos-root   <span class="token number">253</span>:0    <span class="token number">0</span>  17G  <span class="token number">0</span> lvm  /
+&#x2502; &#x2514;&#x2500;centos-swap   <span class="token number">253</span>:1    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+&#x2514;&#x2500;sda3              <span class="token number">8</span>:3    <span class="token number">0</span>   4G  <span class="token number">0</span> part 
+  &#x2514;&#x2500;suhwvg-suhwlv <span class="token number">253</span>:2    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  /home/suhw
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x8981;&#x8C03;&#x6574;&#x7684;&#x903B;&#x8F91;&#x5377;&#x4E3A;<code>suhwvg-suhwlv</code></p>
+<h2 id="&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;"><a name="&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x903B;&#x8F91;&#x5377;&#x4FE1;&#x606F;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lvdisplay </span>
+--- Logical volume ---
+  LV Path                /dev/suhwvg/suhwlv
+  LV Name                suhwlv
+  VG Name                suhwvg
+  LV UUID                j8VX5e-fltA-MWVx-CGrU-BuDs-w4c1-96pC79
+  LV Write Access        read/write
+  LV Creation host, <span class="token function">time</span> suhw, <span class="token number">2020</span>-09-30 <span class="token number">10</span>:58:46 +0800
+  LV Status              available
+  <span class="token comment"># open                 1</span>
+  LV Size                <span class="token number">2.00</span> GiB
+  Current LE             <span class="token number">512</span>
+  Segments               <span class="token number">1</span>
+  Allocation             inherit
+  Read ahead sectors     auto
+  - currently <span class="token builtin class-name">set</span> to     <span class="token number">8192</span>
+  Block device           <span class="token number">253</span>:2
+</code></pre>
+<h2 id="&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;"><a name="&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;" class="anchor-navigation-ex-anchor" href="#&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x83B7;&#x53D6;&#x5377;&#x7EC4;&#x4FE1;&#x606F;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgdisplay </span>
+--- Volume group ---
+  VG Name               suhwvg
+  System ID             
+  Format                lvm2
+  Metadata Areas        <span class="token number">1</span>
+  Metadata Sequence No  <span class="token number">2</span>
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                <span class="token number">0</span>
+  Cur LV                <span class="token number">1</span>
+  Open LV               <span class="token number">1</span>
+  Max PV                <span class="token number">0</span>
+  Cur PV                <span class="token number">1</span>
+  Act PV                <span class="token number">1</span>
+  VG Size               <span class="token operator">&lt;</span><span class="token number">4.00</span> GiB
+  PE Size               <span class="token number">4.00</span> MiB
+  Total PE              <span class="token number">1023</span>
+  Alloc PE / Size       <span class="token number">512</span> / <span class="token number">2.00</span> GiB
+  Free  PE / Size       <span class="token number">511</span> / <span class="token operator">&lt;</span><span class="token number">2.00</span> GiB <span class="token comment">#&#x4E00;&#x4E2A;PE&#x9ED8;&#x8BA4;4M</span>
+  VG UUID               mVeVDv-UwuJ-pzMG-KEBb-95gW-YoKh-aww8uX
+</code></pre>
+<h2 id="&#x6269;&#x5BB9;&#x5377;&#x7EC4;"><a name="&#x6269;&#x5BB9;&#x5377;&#x7EC4;" class="anchor-navigation-ex-anchor" href="#&#x6269;&#x5BB9;&#x5377;&#x7EC4;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6269;&#x5BB9;&#x5377;&#x7EC4;</h2>
+<p>&#x5377;&#x7EC4;&#x53EF;&#x7528;&#x5927;&#x5C0F;&#x4E3A;<code>511*4=2044M</code>&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;4G &#x663E;&#x7136;&#x4E0D;&#x591F;&#xFF0C;&#x6240;&#x4EE5;&#x518D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5206;&#x533A;&#x5230;&#x8BE5;&#x5377;&#x7EC4;&#x4E2D;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># fdisk /dev/sda</span>
+Welcome to <span class="token function">fdisk</span> <span class="token punctuation">(</span>util-linux <span class="token number">2.23</span>.2<span class="token punctuation">)</span>.
+
+Changes will remain <span class="token keyword">in</span> memory only, <span class="token keyword">until</span> you decide to <span class="token function">write</span> them.
+Be careful before using the <span class="token function">write</span> command.
+
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: n
+Partition type:
+   p   primary <span class="token punctuation">(</span><span class="token number">3</span> primary, <span class="token number">0</span> extended, <span class="token number">1</span> <span class="token function">free</span><span class="token punctuation">)</span>
+   e   extended
+Select <span class="token punctuation">(</span>default e<span class="token punctuation">)</span>: p
+Selected partition <span class="token number">4</span>
+First sector <span class="token punctuation">(</span><span class="token number">50331648</span>-167772159, default <span class="token number">50331648</span><span class="token punctuation">)</span>: 
+Using default value <span class="token number">50331648</span>
+Last sector, +sectors or +size<span class="token punctuation">{</span>K,M,G<span class="token punctuation">}</span> <span class="token punctuation">(</span><span class="token number">50331648</span>-167772159, default <span class="token number">167772159</span><span class="token punctuation">)</span>: +8G
+Partition <span class="token number">4</span> of <span class="token builtin class-name">type</span> Linux and of size <span class="token number">8</span> GiB is <span class="token builtin class-name">set</span>
+
+Command <span class="token punctuation">(</span>m <span class="token keyword">for</span> <span class="token builtin class-name">help</span><span class="token punctuation">)</span>: w
+The partition table has been altered<span class="token operator">!</span>
+
+Calling ioctl<span class="token punctuation">(</span><span class="token punctuation">)</span> to re-read partition table.
+
+WARNING: Re-reading the partition table failed with error <span class="token number">16</span>: Device or resource busy.
+The kernel still uses the old table. The new table will be used at
+the next <span class="token function">reboot</span> or after you run partprobe<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span> or kpartx<span class="token punctuation">(</span><span class="token number">8</span><span class="token punctuation">)</span>
+Syncing disks.
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># partprobe</span>
+</code></pre>
+<p>&#x786E;&#x8BA4;&#x78C1;&#x76D8;&#x5206;&#x533A;&#x65B0;&#x5EFA;&#x6210;&#x529F;&#x540E;&#xFF0C;&#x65B0;&#x5EFA;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5377;&#xFF0C;&#x5E76;&#x52A0;&#x5165;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5377;&#x7EC4;&#x4E2D;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lsblk </span>
+NAME              MAJ:MIN RM SIZE RO TYPE MOUNTPOINT
+sda                 <span class="token number">8</span>:0    <span class="token number">0</span>  80G  <span class="token number">0</span> disk 
+&#x251C;&#x2500;sda1              <span class="token number">8</span>:1    <span class="token number">0</span>   1G  <span class="token number">0</span> part /boot
+&#x251C;&#x2500;sda2              <span class="token number">8</span>:2    <span class="token number">0</span>  19G  <span class="token number">0</span> part 
+&#x2502; &#x251C;&#x2500;centos-root   <span class="token number">253</span>:0    <span class="token number">0</span>  17G  <span class="token number">0</span> lvm  /
+&#x2502; &#x2514;&#x2500;centos-swap   <span class="token number">253</span>:1    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  <span class="token punctuation">[</span>SWAP<span class="token punctuation">]</span>
+&#x251C;&#x2500;sda3              <span class="token number">8</span>:3    <span class="token number">0</span>   4G  <span class="token number">0</span> part 
+&#x2502; &#x2514;&#x2500;suhwvg-suhwlv <span class="token number">253</span>:2    <span class="token number">0</span>   2G  <span class="token number">0</span> lvm  /home/suhw
+&#x2514;&#x2500;sda4              <span class="token number">8</span>:4    <span class="token number">0</span>   8G  <span class="token number">0</span> part 
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># pvcreate /dev/sda4</span>
+  Physical volume <span class="token string">&quot;/dev/sda4&quot;</span> successfully created.
+
+<span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgextend suhwvg /dev/sda4</span>
+  Volume group <span class="token string">&quot;suhwvg&quot;</span> successfully extended
+</code></pre>
+<p>&#x52A0;&#x5230; <code>suhwvg</code> &#x5377;&#x7EC4;&#x540E;&#xFF0C; &#x518D;&#x6B21;&#x67E5;&#x770B;&#x5377;&#x7EC4;&#x8BE6;&#x60C5;&#x5C31;&#x4F1A;&#x53D1;&#x73B0;&#x53EF;&#x7528;&#x7A7A;&#x95F4;&#x5DF2;&#x7ECF;&#x589E;&#x52A0;</p>
+<pre class="language-"><code class="lang-bash"> <span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># vgdisplay </span>
+
+ --- Volume group ---
+  VG Name               suhwvg
+  System ID             
+  Format                lvm2
+  Metadata Areas        <span class="token number">2</span>
+  Metadata Sequence No  <span class="token number">3</span>
+  VG Access             read/write
+  VG Status             resizable
+  MAX LV                <span class="token number">0</span>
+  Cur LV                <span class="token number">1</span>
+  Open LV               <span class="token number">1</span>
+  Max PV                <span class="token number">0</span>
+  Cur PV                <span class="token number">2</span>
+  Act PV                <span class="token number">2</span>
+  VG Size               <span class="token number">11.99</span> GiB
+  PE Size               <span class="token number">4.00</span> MiB
+  Total PE              <span class="token number">3070</span>
+  Alloc PE / Size       <span class="token number">512</span> / <span class="token number">2.00</span> GiB
+  Free  PE / Size       <span class="token number">2558</span> / <span class="token number">9.99</span> GiB
+  VG UUID               mVeVDv-UwuJ-pzMG-KEBb-95gW-YoKh-aww8uX
+</code></pre>
+<h2 id="&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;"><a name="&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;" class="anchor-navigation-ex-anchor" href="#&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x903B;&#x8F91;&#x5377;&#x6269;&#x5BB9;</h2>
+<p>&#x6B64;&#x65F6;&#x5377;&#x7EC4;&#x4E2D;&#x53EF;&#x7528;&#x7A7A;&#x95F4;9.9G&#xFF0C;&#x591F;&#x6211;&#x4EEC;&#x518D;&#x6269;4G&#xFF0C;&#x4F7F;&#x7528;<code>lvextennd</code>&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x6CE8;&#xFF1A;<code>-r</code> &#x76F4;&#x63A5;&#x81EA;&#x52A8;&#x6269;&#x5C55;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x5927;&#x5C0F;</p>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># lvextend -L +4G /dev/suhwvg/suhwlv -r</span>
+  Size of logical volume suhwvg/suhwlv changed from <span class="token number">2.00</span> GiB <span class="token punctuation">(</span><span class="token number">512</span> extents<span class="token punctuation">)</span> to <span class="token number">6.00</span> GiB <span class="token punctuation">(</span><span class="token number">1536</span> extents<span class="token punctuation">)</span>.
+  Logical volume suhwvg/suhwlv successfully resized.
+meta-data<span class="token operator">=</span>/dev/mapper/suhwvg-suhwlv <span class="token assign-left variable">isize</span><span class="token operator">=</span><span class="token number">512</span>    <span class="token assign-left variable">agcount</span><span class="token operator">=</span><span class="token number">4</span>, <span class="token assign-left variable">agsize</span><span class="token operator">=</span><span class="token number">131072</span> blks
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">attr</span><span class="token operator">=</span><span class="token number">2</span>, <span class="token assign-left variable">projid32bit</span><span class="token operator">=</span><span class="token number">1</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">crc</span><span class="token operator">=</span><span class="token number">1</span>        <span class="token assign-left variable">finobt</span><span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">spinodes</span><span class="token operator">=</span><span class="token number">0</span>
+data     <span class="token operator">=</span>                       <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">524288</span>, <span class="token assign-left variable">imaxpct</span><span class="token operator">=</span><span class="token number">25</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span>      <span class="token assign-left variable">swidth</span><span class="token operator">=</span><span class="token number">0</span> blks
+naming   <span class="token operator">=</span>version <span class="token number">2</span>              <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   ascii-ci<span class="token operator">=</span><span class="token number">0</span> <span class="token assign-left variable">ftype</span><span class="token operator">=</span><span class="token number">1</span>
+log      <span class="token operator">=</span>internal               <span class="token assign-left variable">bsize</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">2560</span>, <span class="token assign-left variable">version</span><span class="token operator">=</span><span class="token number">2</span>
+         <span class="token operator">=</span>                       <span class="token assign-left variable">sectsz</span><span class="token operator">=</span><span class="token number">512</span>   <span class="token assign-left variable">sunit</span><span class="token operator">=</span><span class="token number">0</span> blks, lazy-count<span class="token operator">=</span><span class="token number">1</span>
+realtime <span class="token operator">=</span>none                   <span class="token assign-left variable">extsz</span><span class="token operator">=</span><span class="token number">4096</span>   <span class="token assign-left variable">blocks</span><span class="token operator">=</span><span class="token number">0</span>, <span class="token assign-left variable">rtextents</span><span class="token operator">=</span><span class="token number">0</span>
+data blocks changed from <span class="token number">524288</span> to <span class="token number">1572864</span>
+</code></pre>
+<h2 id="&#x67E5;&#x770B;&#x7ED3;&#x679C;"><a name="&#x67E5;&#x770B;&#x7ED3;&#x679C;" class="anchor-navigation-ex-anchor" href="#&#x67E5;&#x770B;&#x7ED3;&#x679C;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x67E5;&#x770B;&#x7ED3;&#x679C;</h2>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@suhw ~<span class="token punctuation">]</span><span class="token comment"># df -hT</span>
+Filesystem                Type      Size  Used Avail Use% Mounted on
+/dev/mapper/centos-root   xfs        19G  <span class="token number">1</span>.1G   18G   <span class="token number">6</span>% /
+devtmpfs                  devtmpfs  <span class="token number">4</span>.1G     <span class="token number">0</span>  <span class="token number">4</span>.1G   <span class="token number">0</span>% /dev
+tmpfs                     tmpfs     <span class="token number">4</span>.2G     <span class="token number">0</span>  <span class="token number">4</span>.2G   <span class="token number">0</span>% /dev/shm
+tmpfs                     tmpfs     <span class="token number">4</span>.2G   43M  <span class="token number">4</span>.1G   <span class="token number">2</span>% /run
+tmpfs                     tmpfs     <span class="token number">4</span>.2G     <span class="token number">0</span>  <span class="token number">4</span>.2G   <span class="token number">0</span>% /sys/fs/cgroup
+/dev/sda1                 xfs       <span class="token number">1</span>.1G  152M  912M  <span class="token number">15</span>% /boot
+tmpfs                     tmpfs     821M     <span class="token number">0</span>  821M   <span class="token number">0</span>% /run/user/0
+/dev/mapper/suhwvg-suhwlv xfs       <span class="token number">6</span>.5G   35M  <span class="token number">6</span>.4G   <span class="token number">1</span>% /home/suhw
+</code></pre>
+<hr>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<ul>
+<li><a href="https://www.yisu.com/zixun/3865.html" target="_blank">https://www.yisu.com/zixun/3865.html</a></li>
+<li><a href="https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/61.html" target="_blank">https://wizardforcel.gitbooks.io/vbird-linux-basic-4e/content/61.html</a></li>
+</ul>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="磁盘操作命令小结.html" class="navigation navigation-prev " aria-label="Previous page: 磁盘操作命令小结">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../ansible/" class="navigation navigation-next " aria-label="Next page: Ansible">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"LVM逻辑卷的创建与扩容","level":"1.2.7","depth":2,"next":{"title":"Ansible","level":"1.3","depth":1,"path":"ansible/README.md","ref":"ansible/README.md","articles":[{"title":"安装介绍","level":"1.3.1","depth":2,"path":"ansible/安装介绍.md","ref":"ansible/安装介绍.md","articles":[]},{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},{"title":"Playbook","level":"1.3.3","depth":2,"path":"ansible/Playbook.md","ref":"ansible/Playbook.md","articles":[]},{"title":"Roles","level":"1.3.4","depth":2,"path":"ansible/roles角色.md","ref":"ansible/roles角色.md","articles":[]}]},"previous":{"title":"磁盘操作命令小结","level":"1.2.6","depth":2,"path":"linux/磁盘操作命令小结.md","ref":"linux/磁盘操作命令小结.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"insert-logo":{"url":"images/golang.png","style":"background: none; max-height: 120px; min-height: 120px"},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"linux/LVM逻辑卷的创建与扩容.md","mtime":"2021-01-07T03:37:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-06T14:18:19.654Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
