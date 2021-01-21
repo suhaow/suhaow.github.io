@@ -1,0 +1,636 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>mariaDB安装 · suhw gitbook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="suhaowei">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-okaidia.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../other/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://blog.csdn.net/sssssuuuuu666/" target="_blank" class="custom-link">CSDN</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    前言
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../linux/">
+            
+                <a href="../linux/">
+            
+                    
+                    Linux
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../linux/NFS配置.html">
+            
+                <a href="../linux/NFS配置.html">
+            
+                    
+                    NFS配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../linux/vsftpd.html">
+            
+                <a href="../linux/vsftpd.html">
+            
+                    
+                    vsftpd
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../linux/supervisor.html">
+            
+                <a href="../linux/supervisor.html">
+            
+                    
+                    supervisor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../linux/SSH信任关系.html">
+            
+                <a href="../linux/SSH信任关系.html">
+            
+                    
+                    SSH信任关系
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../linux/LDAP统一认证服务.html">
+            
+                <a href="../linux/LDAP统一认证服务.html">
+            
+                    
+                    LDAP统一认证服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../linux/磁盘操作命令小结.html">
+            
+                <a href="../linux/磁盘操作命令小结.html">
+            
+                    
+                    磁盘操作命令小结
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../linux/LVM逻辑卷的创建与扩容.html">
+            
+                <a href="../linux/LVM逻辑卷的创建与扩容.html">
+            
+                    
+                    LVM逻辑卷的创建与扩容
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../ansible/">
+            
+                <a href="../ansible/">
+            
+                    
+                    Ansible
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../ansible/安装介绍.html">
+            
+                <a href="../ansible/安装介绍.html">
+            
+                    
+                    安装介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../ansible/常用模块.html">
+            
+                <a href="../ansible/常用模块.html">
+            
+                    
+                    常用模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../ansible/Playbook.html">
+            
+                <a href="../ansible/Playbook.html">
+            
+                    
+                    Playbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../ansible/roles角色.html">
+            
+                <a href="../ansible/roles角色.html">
+            
+                    
+                    Roles
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="mariadb10.3安装.html">
+            
+                <a href="mariadb10.3安装.html">
+            
+                    
+                    mariaDB安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../other/">
+            
+                <a href="../other/">
+            
+                    
+                    杂七杂八
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../other/GitBook搭建发布.html">
+            
+                <a href="../other/GitBook搭建发布.html">
+            
+                    
+                    GitBook搭建发布
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >mariaDB安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <html><head></head><body><div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#&#x751F;&#x6210;&#x914D;&#x7F6E;"><b></b>&#x751F;&#x6210;&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x66F4;&#x6362;&#x6E90;"><b></b>&#x66F4;&#x6362;&#x6E90;</a></li><li><span class="title-icon "></span><a href="#&#x5B89;&#x88C5;"><b></b>&#x5B89;&#x88C5;</a></li><li><span class="title-icon "></span><a href="#&#x914D;&#x7F6E;"><b></b>&#x914D;&#x7F6E;</a></li><li><span class="title-icon "></span><a href="#&#x9A8C;&#x8BC1;"><b></b>&#x9A8C;&#x8BC1;</a></li><li><span class="title-icon "></span><a href="#&#x53C2;&#x8003;"><b></b>&#x53C2;&#x8003;</a></li></ul></div><a href="#&#x751F;&#x6210;&#x914D;&#x7F6E;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x751F;&#x6210;&#x914D;&#x7F6E;"><a name="&#x751F;&#x6210;&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x751F;&#x6210;&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x751F;&#x6210;&#x914D;&#x7F6E;</h1>
+<p>&#x5728; <a href="https://downloads.mariadb.org/mariadb/repositories" target="_blank">MariaDB Repository Configuration Tool</a>  &#x9009;&#x62E9;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x4EE5;&#x53CA;&#x9700;&#x8981;&#x5B89;&#x88C5;&#x7684;<code>mariadb</code>&#x7248;&#x672C;&#x3002;&#x5C06;&#x751F;&#x6210;&#x7684;&#x5185;&#x5BB9;&#x5C06;&#x751F;&#x6210;&#x7684;&#x5185;&#x5BB9;&#x4FDD;&#x5B58;&#x81F3;<code>/etc/yum.repos.d/mariadb.repo</code>&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x6211;&#x9009;&#x62E9;&#x7684;&#x662F;&#x7CFB;&#x7EDF;&#x7248;&#x672C;&#x662F;<code>centos7 (x86_64)</code>&#xFF0C;&#x8981;&#x5B89;&#x88C5;&#x7684;&#x662F;<code>10.3[old stable]</code>&#x7248;&#x672C;&#x3002;</p>
+<pre class="language-"><code># MariaDB 10.3 CentOS repository list - created 2021-01-21 06:32 UTC
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.3/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+</code></pre><h1 id="&#x66F4;&#x6362;&#x6E90;"><a name="&#x66F4;&#x6362;&#x6E90;" class="anchor-navigation-ex-anchor" href="#&#x66F4;&#x6362;&#x6E90;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x66F4;&#x6362;&#x6E90;</h1>
+<p>&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x66FF;&#x6362;&#x6E90;&#x5730;&#x5740;</p>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">&apos;s#yum\.mariadb\.org#mirrors.ustc.edu.cn/mariadb/yum#&apos;</span> /etc/yum.repos.d/mariadb.repo
+<span class="token comment"># &#x5EFA;&#x8BAE;&#x4F7F;&#x7528; HTTPS</span>
+<span class="token function">sudo</span> <span class="token function">sed</span> -i <span class="token string">&apos;s#http://mirrors\.ustc\.edu\.cn#https://mirrors.ustc.edu.cn#g&apos;</span> /etc/yum.repos.d/mariadb.repo
+</code></pre>
+<h1 id="&#x5B89;&#x88C5;"><a name="&#x5B89;&#x88C5;" class="anchor-navigation-ex-anchor" href="#&#x5B89;&#x88C5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5B89;&#x88C5;</h1>
+<pre class="language-"><code class="lang-bash"><span class="token function">sudo</span> yum <span class="token function">install</span> MariaDB-server MariaDB-client
+</code></pre>
+<h1 id="&#x914D;&#x7F6E;"><a name="&#x914D;&#x7F6E;" class="anchor-navigation-ex-anchor" href="#&#x914D;&#x7F6E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x914D;&#x7F6E;</h1>
+<ol>
+<li>&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5E76;&#x8BBE;&#x4E3A;&#x5F00;&#x673A;&#x81EA;&#x542F;</li>
+</ol>
+<pre class="language-"><code>systemctl start mariadb
+systemctl enable mariadb
+</code></pre><ol>
+<li>&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;</li>
+</ol>
+<p>&#x6267;&#x884C;<code>mysql_secure_installation</code>&#x547D;&#x4EE4;&#x8FDB;&#x884C;<code>root</code>&#x5BC6;&#x7801;&#x7684;&#x8BBE;&#x7F6E;</p>
+<pre class="language-"><code class="lang-bash">mysql_secure_installation <span class="token comment">#&#x8BBE;&#x7F6E;root&#x5BC6;&#x7801;&#x7B49;&#x76F8;&#x5173;</span>
+
+Enter current password <span class="token keyword">for</span> root <span class="token punctuation">(</span>enter <span class="token keyword">for</span> none<span class="token punctuation">)</span>:  <span class="token comment"># &#x8F93;&#x5165;&#x6570;&#x636E;&#x5E93;&#x8D85;&#x7EA7;&#x7BA1;&#x7406;&#x5458;root&#x7684;&#x5BC6;&#x7801;(&#x6CE8;&#x610F;&#x4E0D;&#x662F;&#x7CFB;&#x7EDF;root&#x7684;&#x5BC6;&#x7801;)&#xFF0C;&#x7B2C;&#x4E00;&#x6B21;&#x8FDB;&#x5165;&#x8FD8;&#x6CA1;&#x6709;&#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#x5219;&#x76F4;&#x63A5;&#x56DE;&#x8F66;</span>
+
+Set root password? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>  <span class="token comment"># &#x8BBE;&#x7F6E;&#x5BC6;&#x7801;&#xFF0C;y</span>
+
+New password:  <span class="token comment"># &#x65B0;&#x5BC6;&#x7801;</span>
+Re-enter new password:  <span class="token comment"># &#x518D;&#x6B21;&#x8F93;&#x5165;&#x5BC6;&#x7801;</span>
+
+Remove anonymous users? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>  <span class="token comment"># &#x79FB;&#x9664;&#x533F;&#x540D;&#x7528;&#x6237;&#xFF0C; y</span>
+
+Disallow root login remotely? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>  <span class="token comment"># &#x62D2;&#x7EDD;root&#x8FDC;&#x7A0B;&#x767B;&#x5F55;&#xFF0C;n&#xFF0C;&#x4E0D;&#x7BA1;y/n&#xFF0C;&#x90FD;&#x4F1A;&#x62D2;&#x7EDD;root&#x8FDC;&#x7A0B;&#x767B;&#x5F55;</span>
+
+Remove <span class="token builtin class-name">test</span> database and access to it? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>  <span class="token comment"># &#x5220;&#x9664;test&#x6570;&#x636E;&#x5E93;&#xFF0C;y&#xFF1A;&#x5220;&#x9664;&#x3002;n&#xFF1A;&#x4E0D;&#x5220;&#x9664;&#xFF0C;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;test&#x6570;&#x636E;&#x5E93;&#xFF0C;&#x4E00;&#x822C;&#x4E0D;&#x9700;&#x8981;</span>
+
+Reload privilege tables now? <span class="token punctuation">[</span>Y/n<span class="token punctuation">]</span>  <span class="token comment"># &#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6743;&#x9650;&#x8868;&#xFF0C;y&#x3002;&#x6216;&#x8005;&#x91CD;&#x542F;&#x670D;&#x52A1;&#x4E5F;&#x8BB8;</span>
+</code></pre>
+<ol>
+<li>&#x8BBE;&#x7F6E;&#x5B57;&#x7B26;&#x96C6;</li>
+</ol>
+<p>&#x5728;<code>/etc/my.cnf</code>&#x6587;&#x4EF6;<code>[mysqld]</code>&#x6807;&#x7B7E;&#x4E0B;&#x6DFB;&#x52A0;</p>
+<pre class="language-"><code>init_connect=&apos;SET collation_connection = utf8_unicode_ci&apos;
+init_connect=&apos;SET NAMES utf8&apos;
+character-set-server=utf8
+collation-server=utf8_unicode_ci
+skip-character-set-client-handshake
+</code></pre><p>&#x5728;<code>/etc/my.cnf.d/client.cnf</code>&#x6587;&#x4EF6;<code>[client]</code>&#x6807;&#x7B7E;&#x4E0B;&#x6DFB;&#x52A0;</p>
+<pre class="language-"><code>default-character-set=utf8
+</code></pre><p>&#x5728;<code>/etc/my.cnf.d/mysql-clients.cnf</code>&#x6587;&#x4EF6;<code>[mysql]</code>&#x6807;&#x7B7E;&#x4E0B;&#x6DFB;&#x52A0;</p>
+<pre class="language-"><code>default-character-set=utf8
+</code></pre><ol>
+<li>&#x91CD;&#x542F;&#x670D;&#x52A1;</li>
+</ol>
+<pre class="language-"><code class="lang-bash">systemctl restart mariadb
+</code></pre>
+<h1 id="&#x9A8C;&#x8BC1;"><a name="&#x9A8C;&#x8BC1;" class="anchor-navigation-ex-anchor" href="#&#x9A8C;&#x8BC1;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9A8C;&#x8BC1;</h1>
+<ol>
+<li>&#x67E5;&#x770B;<code>mariadb</code>&#x7248;&#x672C;</li>
+</ol>
+<pre class="language-"><code class="lang-bash"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># mysql -uroot -p</span>
+
+Welcome to the MariaDB monitor.  Commands end with <span class="token punctuation">;</span> or <span class="token punctuation">\</span>g.
+Your MariaDB connection <span class="token function">id</span> is <span class="token number">12</span>
+Server version: <span class="token number">10.3</span>.27-MariaDB MariaDB Server
+
+Copyright <span class="token punctuation">(</span>c<span class="token punctuation">)</span> <span class="token number">2000</span>, <span class="token number">2018</span>, Oracle, MariaDB Corporation Ab and others.
+
+Type <span class="token string">&apos;help;&apos;</span> or <span class="token string">&apos;\h&apos;</span> <span class="token keyword">for</span> help. Type <span class="token string">&apos;<span class="token entity" title="\c">\c</span>&apos;</span> to <span class="token function">clear</span> the current input statement.
+
+MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span>
+</code></pre>
+<p>&#x5B89;&#x88C5;&#x7248;&#x672C;&#x4E3A;10.3.27&#x1F197;</p>
+<ol>
+<li>&#x67E5;&#x770B;&#x5B57;&#x7B26;&#x96C6;&#x76F8;&#x5173;&#x914D;&#x7F6E;</li>
+</ol>
+<pre class="language-"><code class="lang-bash">MariaDB <span class="token punctuation">[</span><span class="token punctuation">(</span>none<span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token operator">&gt;</span> show variables like <span class="token string">&quot;%character%&quot;</span><span class="token punctuation">;</span>show variables like <span class="token string">&quot;%collation%&quot;</span><span class="token punctuation">;</span>
++--------------------------+----------------------------+
+<span class="token operator">|</span> Variable_name            <span class="token operator">|</span> Value                      <span class="token operator">|</span>
++--------------------------+----------------------------+
+<span class="token operator">|</span> character_set_client     <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_connection <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_database   <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_filesystem <span class="token operator">|</span> binary                     <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_results    <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_server     <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_set_system     <span class="token operator">|</span> utf8                       <span class="token operator">|</span>
+<span class="token operator">|</span> character_sets_dir       <span class="token operator">|</span> /usr/share/mysql/charsets/ <span class="token operator">|</span>
++--------------------------+----------------------------+
+<span class="token number">8</span> rows <span class="token keyword">in</span> <span class="token builtin class-name">set</span> <span class="token punctuation">(</span><span class="token number">0.00</span> sec<span class="token punctuation">)</span>
+
++----------------------+-----------------+
+<span class="token operator">|</span> Variable_name        <span class="token operator">|</span> Value           <span class="token operator">|</span>
++----------------------+-----------------+
+<span class="token operator">|</span> collation_connection <span class="token operator">|</span> utf8_unicode_ci <span class="token operator">|</span>
+<span class="token operator">|</span> collation_database   <span class="token operator">|</span> utf8_unicode_ci <span class="token operator">|</span>
+<span class="token operator">|</span> collation_server     <span class="token operator">|</span> utf8_unicode_ci <span class="token operator">|</span>
+</code></pre>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<p><a href="https://www.cnblogs.com/yhongji/p/9783065.html" target="_blank">centos7 &#x5B89;&#x88C5;Mariadb</a></p>
+<p><a href="https://mirrors.ustc.edu.cn/help/mariadb.html#mariadb" target="_blank">MariaDB &#x6E90;&#x4F7F;&#x7528;&#x5E2E;&#x52A9;</a></p>
+</body></html>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: MySQL">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../other/" class="navigation navigation-next " aria-label="Next page: 杂七杂八">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"mariaDB安装","level":"1.4.1","depth":2,"next":{"title":"杂七杂八","level":"1.5","depth":1,"path":"other/README.md","ref":"other/README.md","articles":[{"title":"GitBook搭建发布","level":"1.5.1","depth":2,"path":"other/GitBook搭建发布.md","ref":"other/GitBook搭建发布.md","articles":[]}]},"previous":{"title":"MySQL","level":"1.4","depth":1,"path":"mysql/README.md","ref":"mysql/README.md","articles":[{"title":"mariaDB安装","level":"1.4.1","depth":2,"path":"mysql/mariadb10.3安装.md","ref":"mysql/mariadb10.3安装.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","-sharing","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"twitter":false,"facebook":false,"google":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","links":{"sidebar":{"CSDN":"https://blog.csdn.net/sssssuuuuu666/"}},"gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"mysql/mariadb10.3安装.md","mtime":"2021-01-21T07:03:22.293Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T07:03:27.072Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

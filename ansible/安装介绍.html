@@ -316,7 +316,39 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../other/">
+        <li class="chapter " data-level="1.4" data-path="../mysql/">
+            
+                <a href="../mysql/">
+            
+                    
+                    MySQL
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../mysql/mariadb10.3安装.html">
+            
+                <a href="../mysql/mariadb10.3安装.html">
+            
+                    
+                    mariaDB安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../other/">
             
                 <a href="../other/">
             
@@ -330,7 +362,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../other/GitBook搭建发布.html">
+        <li class="chapter " data-level="1.5.1" data-path="../other/GitBook搭建发布.html">
             
                 <a href="../other/GitBook搭建发布.html">
             
@@ -579,15 +611,15 @@ ansible-galaxy remove geerlingguy.redis
 <h3 id="&#x4F5C;&#x7528;"><a name="&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h3>
 <p>&#x6B64;&#x5DE5;&#x5177;&#x7528;&#x4E8E;&#x6267;&#x884C;&#x7F16;&#x5199;&#x597D;&#x7684; <code>playbook</code>&#x4EFB;&#x52A1;</p>
 <h3 id="&#x793A;&#x4F8B;_2"><a name="&#x793A;&#x4F8B;_2" class="anchor-navigation-ex-anchor" href="#&#x793A;&#x4F8B;_2"><i class="fa fa-link" aria-hidden="true"></i></a>&#x793A;&#x4F8B;</h3>
-<pre class="language-"><code class="lang-yml"><span class="token punctuation">[</span>root@localhost ~<span class="token punctuation">]</span><span class="token comment"># cat hello.yml </span>
-<span class="token punctuation">-</span> <span class="token key atrule">hosts</span><span class="token punctuation">:</span> server
-  <span class="token key atrule">remote_user</span><span class="token punctuation">:</span> root  
-  <span class="token key atrule">tasks</span><span class="token punctuation">:</span>
-    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> hello world
-      <span class="token key atrule">command</span><span class="token punctuation">:</span> /usr/bin/wall hello world
+<pre class="language-"><code class="lang-yml">[root@localhost ~]# cat hello.yml 
+- hosts: server
+  remote_user: root  
+  tasks:
+    - name: hello world
+      command: /usr/bin/wall hello world
 </code></pre>
 <p>&#x6267;&#x884C;&#x7ED3;&#x679C;</p>
-<p><a href="https://gitee.com/suhaow/note/raw/master/img/image-20201224112943374.png" data-lightbox="c4c043b1-7109-4172-a3d7-03ab4c86640c" data-title="image-20201224112943374" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/image-20201224112943374.png" alt="image-20201224112943374"></a></p>
+<p><a href="https://gitee.com/suhaow/note/raw/master/img/image-20201224112943374.png" data-lightbox="f6f423ef-334f-4229-b565-ea419132c7a4" data-title="image-20201224112943374" target="_blank"><img src="https://gitee.com/suhaow/note/raw/master/img/image-20201224112943374.png" alt="image-20201224112943374"></a></p>
 <h2 id="ansible-vault"><a name="ansible-vault" class="anchor-navigation-ex-anchor" href="#ansible-vault"><i class="fa fa-link" aria-hidden="true"></i></a>ansible-vault</h2>
 <h3 id="&#x4F5C;&#x7528;_1"><a name="&#x4F5C;&#x7528;_1" class="anchor-navigation-ex-anchor" href="#&#x4F5C;&#x7528;_1"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4F5C;&#x7528;</h3>
 <p>&#x6B64;&#x5DE5;&#x5177;&#x53EF;&#x4EE5;&#x7528;&#x4E8E;&#x52A0;&#x5BC6;&#x89E3;&#x5BC6;yml&#x6587;&#x4EF6;</p>
@@ -694,7 +726,7 @@ root@appsrvs <span class="token punctuation">(</span><span class="token number">
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"安装介绍","level":"1.3.1","depth":2,"next":{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},"previous":{"title":"Ansible","level":"1.3","depth":1,"path":"ansible/README.md","ref":"ansible/README.md","articles":[{"title":"安装介绍","level":"1.3.1","depth":2,"path":"ansible/安装介绍.md","ref":"ansible/安装介绍.md","articles":[]},{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},{"title":"Playbook","level":"1.3.3","depth":2,"path":"ansible/Playbook.md","ref":"ansible/Playbook.md","articles":[]},{"title":"Roles","level":"1.3.4","depth":2,"path":"ansible/roles角色.md","ref":"ansible/roles角色.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","-sharing","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"twitter":false,"facebook":false,"google":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","links":{"sidebar":{"CSDN":"https://blog.csdn.net/sssssuuuuu666/"}},"gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"ansible/安装介绍.md","mtime":"2021-01-06T08:46:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-11T07:20:20.754Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"安装介绍","level":"1.3.1","depth":2,"next":{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},"previous":{"title":"Ansible","level":"1.3","depth":1,"path":"ansible/README.md","ref":"ansible/README.md","articles":[{"title":"安装介绍","level":"1.3.1","depth":2,"path":"ansible/安装介绍.md","ref":"ansible/安装介绍.md","articles":[]},{"title":"常用模块","level":"1.3.2","depth":2,"path":"ansible/常用模块.md","ref":"ansible/常用模块.md","articles":[]},{"title":"Playbook","level":"1.3.3","depth":2,"path":"ansible/Playbook.md","ref":"ansible/Playbook.md","articles":[]},{"title":"Roles","level":"1.3.4","depth":2,"path":"ansible/roles角色.md","ref":"ansible/roles角色.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","expandable-chapters","lightbox","-lunr","-search","search-pro","splitter","code","anchor-navigation-ex","github","-highlight","prism","-sharing","hide-element","livereload"],"root":".","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"prism":{"css":["prismjs/themes/prism-okaidia.css"]},"github":{"url":"https://github.com/suhaow"},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":false},"lightbox":{"jquery":true,"sameUuid":false},"sharing":{"twitter":false,"facebook":false,"google":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"suhaowei","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"suhw gitbook","language":"zh-hans","links":{"sidebar":{"CSDN":"https://blog.csdn.net/sssssuuuuu666/"}},"gitbook":"*","description":"suhw 学习笔记"},"file":{"path":"ansible/安装介绍.md","mtime":"2021-01-06T08:46:09.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-01-21T07:03:27.072Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
